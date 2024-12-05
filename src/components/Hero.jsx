@@ -22,7 +22,7 @@ export default function Hero() {
       <CanvasCursor />
       <motion.div
         style={{ opacity, y }}
-        className="container relative z-10 mx-auto px-4 py-24 sm:px-6 lg: px-8"
+        className="container relative z-10 mx-auto px-4 py-24 sm:px-6 lg:px-8"
       >
         <div className="max-w-4xl mx-auto">
           <motion.div
@@ -36,7 +36,7 @@ export default function Hero() {
                 initial={{ opacity: 0, scale: 0.5 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 0.2 }}
-                className="inline-block px-4 py-1.5 rounded-full bg-purple300/50 text-primary text-sm font-medium z-10"
+                className="inline-block px-4 py-1.5 rounded-full bg-purple-300/50 text-primary text-sm font-medium z-10"
               >
                 👋 Hi, I&apos;m Available for Freelance & Full-Time
                 Opportunities
