@@ -38,8 +38,7 @@ export default function Hero() {
                 transition={{ delay: 0.2 }}
                 className="inline-block px-4 py-1.5 rounded-full bg-purple-300/50 text-primary text-sm font-medium z-10"
               >
-                👋 Hi, I&apos;m Available for Freelance & Full-Time
-                Opportunities
+                Available for Freelance & Full-Time Opportunities
               </motion.div>
               <motion.h1
                 initial={{ opacity: 0 }}
