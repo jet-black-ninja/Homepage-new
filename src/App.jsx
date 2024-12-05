@@ -1,35 +1,41 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import LocomotiveScroll from "locomotive-scroll";
+import { useEffect, useState } from "react";
+import Navbar from "./components/Navbar";
+import { Route, Routes } from "react-router-dom";
+import Homepage from "./pages/HomePage";
+import ProjectPage from "./pages/ProjectPage";
+import ProjectDetails from "./pages/ProjectDetails";
+import AboutPage from "./pages/AboutPage";
+import ContactPage from "./pages/ContactPage";
+import ResumeActions from "./components/common/ResumeActions";
 
 function App() {
-  const [count, setCount] = useState(0)
+  // useEffect(() => {
+  //   const scroll = new LocomotiveScroll({
+  //     el: document.querySelector("[data-scroll-container]"),
+  //     smooth: true,
+  //   });
 
+  //   return () => scroll.destroy();
+  // }, []);
+
+  const [activeSection, setActiveSection] = useState("");
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <Navbar activeSection={activeSection} />
+      <Routes>
+        <Route
+          path="/"
+          element={<Homepage setActiveSection={setActiveSection} />}
+        />
+        <Route path="/projects" element={<ProjectPage />} />
+        <Route path="/projects/:slug" element={<ProjectDetails />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/contact" element={<ContactPage />} />
+      </Routes>
+      <ResumeActions />
     </>
-  )
+  );
 }
 
-export default App
+export default App;

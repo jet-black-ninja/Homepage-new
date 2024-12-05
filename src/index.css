@@ -1,8 +1,25 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: 'Montreal';
+  src: url('/fonts/Montreal-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montreal';
+  src: url('/fonts/Montreal-Book.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
 @layer base {
   :root {
+    --font-sans: "Montreal", sans-serif;
+    /* added sans-serif as fallback*/
     --background: 0 0% 100%;
     --foreground: 0 0% 3.9%;
     --card: 0 0% 100%;
@@ -29,6 +46,7 @@
     --chart-5: 27 87% 67%;
     --radius: 0.5rem
   }
+
   .dark {
     --background: 0 0% 3.9%;
     --foreground: 0 0% 98%;
@@ -56,11 +74,31 @@
     --chart-5: 340 75% 55%
   }
 }
+
 @layer base {
   * {
     @apply border-border;
   }
+
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-montreal;
   }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.4s ease-out forwards;
+}
+
+.ease-spring {
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
