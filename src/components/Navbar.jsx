@@ -12,12 +12,16 @@ import {
 import { GiNinjaStar } from "react-icons/gi";
 import { BsGithub } from "react-icons/bs";
 import { MdMenuOpen } from "react-icons/md";
+import PropTypes from "prop-types";
 const navLinks = [
   { id: "1", name: "Home", href: "/" },
   { id: "2", name: "Projects", href: "/projects" },
   { id: "3", name: "About", href: "/about" },
   { id: "4", name: "Contact", href: "/contact" },
 ];
+Navbar.propTypes = {
+  activeSection: PropTypes.string,
+};
 export default function Navbar({ activeSection }) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
@@ -103,25 +107,25 @@ export default function Navbar({ activeSection }) {
                 className="w-full sm:w-[300px] bg-purple-300 backdrop-blur-lg"
               >
                 <SheetHeader className="border-b border-purple-900 pb-4">
-                  <SheetTitle className="text-left">Navigation</SheetTitle>
+                  <SheetTitle className="text-left">Menu</SheetTitle>
                 </SheetHeader>
                 <nav className="flex flex-col space-y-4 mt-8">
                   {navLinks.map((item) => (
                     <Link
                       key={item.id}
                       to={item.href}
-                      onClick={(e) => {
-                        e.preventDefault(); // Prevent the default link behavior
+                      onClick={() => {
                         setIsOpen(false);
                         playClickSound();
                         setTimeout(() => {
-                          window.location.href = item.href; // Redirect programmatically
-                        }, 400); // Match the timeout with the transition duration if needed
+                          window.location.href = item.href;
+                        }, 400);
                       }}
                     >
-                      <div className="flex items-center space-x-4 px-2 py-2 hover:bg-white active:bg-white rounded-md transition-colors border-b border-slate-900">
-                        <span className="text-sm text-gray-800">{item.id}</span>
-                        <span className="text-base font-bold">{item.name}</span>
+                      <div className="flex items-center space-x-4 px-2 py-2 hover:bg-white active:bg-white rounded-md transition-colors   justify-center">
+                        <span className="text-base font-bold ">
+                          {item.name}
+                        </span>
                       </div>
                     </Link>
                   ))}
