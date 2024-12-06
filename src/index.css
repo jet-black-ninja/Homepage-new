@@ -3,22 +3,22 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: 'Montreal';
-  src: url('/fonts/Montreal-Light.ttf') format('truetype');
+  font-family: "Monoid";
+  src: url("src/assets/fonts/MonoidNerdFont-Regular.ttf") format("truetype");
   font-weight: 300;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Montreal';
-  src: url('/fonts/Montreal-Book.ttf') format('truetype');
+  font-family: "Monoid";
+  src: url("src/assets/fonts/MonoidNerdFont-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
 }
 
 @layer base {
   :root {
-    --font-sans: "Montreal", sans-serif;
+    --font-sans: "Monoid", sans-serif;
     /* added sans-serif as fallback*/
     --background: 0 0% 100%;
     --foreground: 0 0% 3.9%;
@@ -44,7 +44,8 @@
     --chart-3: 197 37% 24%;
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
-    --radius: 0.5rem}
+    --radius: 0.5rem;
+  }
 
   .dark {
     --background: 0 0% 3.9%;
@@ -70,7 +71,8 @@
     --chart-2: 160 60% 45%;
     --chart-3: 30 80% 55%;
     --chart-4: 280 65% 60%;
-    --chart-5: 340 75% 55%}
+    --chart-5: 340 75% 55%;
+  }
 }
 
 @layer base {
@@ -79,7 +81,7 @@
   }
 
   body {
-    @apply bg-background text-foreground font-montreal;
+    @apply bg-background text-foreground font-monoid;
   }
 }
 

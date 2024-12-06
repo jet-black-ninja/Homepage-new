@@ -36,7 +36,7 @@ export default function Hero() {
                 initial={{ opacity: 0, scale: 0.5 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 0.2 }}
-                className="inline-block px-4 py-1.5 rounded-full bg-purple-300/50 text-primary text-sm font-medium z-10"
+                className="inline-block px-4 py-1.5 rounded-full bg-purple-300/50 text-primary text-xs  md:text-sm lg:text-sm font-small z-10"
               >
                 Available for Freelance & Full-Time Opportunities
               </motion.div>
@@ -44,7 +44,7 @@ export default function Hero() {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.3 }}
-                className="text-4xl font-bold text-primary sm:text-5xl lg:text-6xl"
+                className="text-4xl font-bold text-primary sm:text-4xl lg:text-5xl"
               >
                 Hi, I&apos;m Sachin Kumar Singh
                 <span className="text-purple-300">.</span>
@@ -53,7 +53,7 @@ export default function Hero() {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.4 }}
-                className="text-2xl sm:text-3xl lg:text-4xl text-black font-medium"
+                className="text-xl sm:text-2xl lg:text-3xl text-black font-medium dark:text-white"
               >
                 I build{" "}
                 <FlipWords

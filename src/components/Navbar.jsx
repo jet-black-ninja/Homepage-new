@@ -13,6 +13,7 @@ import { GiNinjaStar } from "react-icons/gi";
 import { BsGithub } from "react-icons/bs";
 import { MdMenuOpen } from "react-icons/md";
 import PropTypes from "prop-types";
+import { MoonIcon, SunIcon } from "lucide-react";
 const navLinks = [
   { id: "1", name: "Home", href: "/" },
   { id: "2", name: "Projects", href: "/projects" },
@@ -22,7 +23,7 @@ const navLinks = [
 Navbar.propTypes = {
   activeSection: PropTypes.string,
 };
-export default function Navbar({ activeSection }) {
+export default function Navbar({ activeSection, darkMode, setDarkMode }) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
 
@@ -37,7 +38,7 @@ export default function Navbar({ activeSection }) {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-  console.log("active section", activeSection);
+  // console.log("active section", activeSection);
 
   return (
     <header
@@ -50,7 +51,10 @@ export default function Navbar({ activeSection }) {
           <div className="flex items-center">
             <Link to={"/"}>
               <div className="flex-shrink-0 bg-purple-500 rounded-full">
-                <GiNinjaStar size="40" className="text-secondary" />
+                <GiNinjaStar
+                  size="40"
+                  className="text-secondary  hover:animate-spin "
+                />
               </div>
             </Link>
 
@@ -62,12 +66,12 @@ export default function Navbar({ activeSection }) {
                       variant="ghost"
                       className={`text-sm transition-all duration-300 font-medium ${
                         activeSection === "aboutMe"
-                          ? "text-gray-900"
+                          ? "text-violet-500"
                           : activeSection === "projects"
-                          ? "text-purple-500"
+                          ? "text-blue-500"
                           : activeSection === "skills"
-                          ? "text-white"
-                          : "text-gray-900"
+                          ? "text-emerald-600"
+                          : "text-purple-300"
                       }`}
                       onClick={playClickSound}
                     >
@@ -78,9 +82,20 @@ export default function Navbar({ activeSection }) {
               </div>
             </div>
           </div>
-          <div className="flex items-center">
+          <div className="flex items-center gap-2">
+            <Button
+              onClick={() => setDarkMode(!darkMode)}
+              className="p-2 rounded-sm"
+              size="icon"
+            >
+              {!darkMode ? <SunIcon /> : <MoonIcon />}
+            </Button>
             <Link to="https://github.com/jet-black-ninja">
-              <Button variant="ghost" size="icon" className="mr-2 bg-gray-400">
+              <Button
+                variant="ghost"
+                size="icon"
+                className="bg-white dark:bg-slate-950 ring-slate-950 ring-1 dark:ring-white"
+              >
                 <BsGithub className="h-5 w-5" />
               </Button>
             </Link>
@@ -91,11 +106,11 @@ export default function Navbar({ activeSection }) {
                   size="icon"
                   className={`md:hidden ${
                     activeSection === "aboutMe"
-                      ? "text-gray-900"
+                      ? "bg-violet-500"
                       : activeSection === "projects"
                       ? "bg-blue-500"
                       : activeSection === "skills"
-                      ? "bg-white"
+                      ? "bg-emerald-600"
                       : "bg-purple-500"
                   }`}
                 >

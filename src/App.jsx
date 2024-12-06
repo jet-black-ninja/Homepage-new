@@ -18,11 +18,27 @@ function App() {
 
   //   return () => scroll.destroy();
   // }, []);
+  const [darkMode, setDarkMode] = useState(() => {
+    return localStorage.getItem("theme") === "dark";
+  });
 
+  useEffect(() => {
+    if (darkMode) {
+      document.documentElement.classList.add("dark");
+      localStorage.setItem("theme", "dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+      localStorage.setItem("theme", "light");
+    }
+  }, [darkMode, setDarkMode]);
   const [activeSection, setActiveSection] = useState("");
   return (
     <>
-      <Navbar activeSection={activeSection} />
+      <Navbar
+        activeSection={activeSection}
+        setDarkMode={setDarkMode}
+        darkMode={darkMode}
+      />
       <Routes>
         <Route
           path="/"

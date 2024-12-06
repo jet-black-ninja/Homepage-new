@@ -12,8 +12,8 @@ export default {
         sm: "calc(var(--radius) - 4px)",
       },
       fontFamily: {
-        montreal: ["Montreal", ...fontFamily.sans],
-        sans: ["Montreal", ...fontFamily.sans],
+        monoid: ["Monoid", ...fontFamily.sans],
+        sans: ["Monoid", ...fontFamily.sans],
       },
       animation: {
         "infinite-scroll": "infinite-scroll 25s linear infinite",
