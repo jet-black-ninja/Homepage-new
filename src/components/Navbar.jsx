@@ -61,7 +61,7 @@ export default function Navbar({ activeSection }) {
                     <Button
                       variant="ghost"
                       className={`text-sm transition-all duration-300 font-medium ${
-                        activeSection === "aboutus"
+                        activeSection === "aboutMe"
                           ? "text-gray-900"
                           : activeSection === "projects"
                           ? "text-purple-500"
@@ -90,7 +90,7 @@ export default function Navbar({ activeSection }) {
                   variant="ghost"
                   size="icon"
                   className={`md:hidden ${
-                    activeSection === "aboutus"
+                    activeSection === "aboutMe"
                       ? "text-gray-900"
                       : activeSection === "projects"
                       ? "bg-blue-500"

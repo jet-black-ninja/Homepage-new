@@ -10,7 +10,7 @@ export default function Homepage({ setActiveSection }) {
     <div>
       <Banner />
       <Hero />
-      <ScrollStack setActiveSection={setActiveSection} />
+      <ScrollStack onSectionChange={setActiveSection} />
     </div>
   );
 }
