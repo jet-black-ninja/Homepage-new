@@ -18,9 +18,13 @@ export default function Hero() {
     "Dynamic",
   ];
   return (
-    <div className="relative min-h-[90vh] flex items-center">
+    <div
+      className="relative min-h-[90vh] flex items-center"
+      data-scroll-section
+    >
       <CanvasCursor />
       <motion.div
+        data-scroll
         style={{ opacity, y }}
         className="container relative z-10 mx-auto px-4 py-24 sm:px-6 lg:px-8"
       >

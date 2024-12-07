@@ -5,21 +5,14 @@ import { Button } from "../ui/button";
 import { ArrowRight } from "lucide-react";
 export default function AboutMe() {
   return (
-    <section className="w-full min-h-screen bg-[#EFEFEF] dark:bg-slate-900 flex items-center justify-center rounded-tl-[40px] md:rounded-tl-[80px] px-4 ">
+    <section
+      data-scroll-section
+      className="w-full min-h-screen bg-[#EFEFEF] dark:bg-slate-900 flex items-center justify-center rounded-tl-[40px] md:rounded-tl-[80px] px-4 "
+    >
       <div
         className="max-w-6xl mx-auto flex flex-col-reverse items-center justify-between
     md:flex-row gap-12 mt-4"
       >
-        <div className="w-full md:w-1/2">
-          <div className="relative w-full aspect-square rounded-2xl overflow-hidden">
-            <img
-              src={me}
-              alt="developer developing"
-              className="w-full h-full object-cover object-center"
-              loading="lazy"
-            />
-          </div>
-        </div>
         <div className="w-full md:w-1/2 grid gap-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -63,6 +56,16 @@ export default function AboutMe() {
               </a>
             </Button>
           </motion.div>
+        </div>
+        <div className="w-full md:w-1/2">
+          <div className="relative w-full aspect-square rounded-2xl overflow-hidden">
+            <img
+              src={me}
+              alt="developer developing"
+              className="w-full h-full object-cover object-center"
+              loading="lazy"
+            />
+          </div>
         </div>
       </div>
     </section>

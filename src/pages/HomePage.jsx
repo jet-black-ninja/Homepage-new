@@ -7,7 +7,7 @@ Homepage.propTypes = {
 };
 export default function Homepage({ setActiveSection }) {
   return (
-    <div>
+    <div data-scroll-container>
       <Banner />
       <Hero />
       <ScrollStack onSectionChange={setActiveSection} />

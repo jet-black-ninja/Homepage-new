@@ -17,36 +17,40 @@ export default function ScrollStack({ onSectionChange }) {
       sections.forEach((section) => {
         const sectionTop = section.offsetTop;
         const sectionHeight = section.offsetHeight;
+
         if (
           window.scrollY >= sectionTop - 50 &&
           window.scrollY < sectionTop + sectionHeight
         ) {
           const sectionId = section.getAttribute("id");
+          console.log("Current Section:", sectionId); // Log active section
           onSectionChange(sectionId);
         }
       });
     };
+
     window.addEventListener("scroll", handleScroll);
+
     return () => window.removeEventListener("scroll", handleScroll);
   }, [onSectionChange]);
   return (
-    <ReactLenis root>
+    <ReactLenis root options={{ smoothWheel: true }}>
       <main>
         <article>
-          <section className="h-screen sticky top-0" id="aboutMe">
+          <section className="h-screen top-0 " id="aboutMe">
             <AboutMe />
           </section>
-          <section id="skills" className="h-screen sticky top-0">
+          <section id="skills" className="h-screen top-0">
             <Skills />
           </section>
-          <section id="projects" className="h-screen sticky top-0">
+          <section id="projects" className="h-screen top-0 ">
             <Projects />
           </section>
 
-          <section id="experience" className="h-screen sticky top-0">
+          <section id="experience" className="h-screen  top-0 ">
             <Experience />
           </section>
-          <section id="links" className="h-screen sticky top-0">
+          <section id="links" className="h-screen top-0">
             <Links />
           </section>
         </article>
