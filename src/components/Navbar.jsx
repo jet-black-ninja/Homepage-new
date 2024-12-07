@@ -22,6 +22,8 @@ const navLinks = [
 ];
 Navbar.propTypes = {
   activeSection: PropTypes.string,
+  darkMode: PropTypes.bool,
+  setDarkMode: PropTypes.func.isRequired,
 };
 export default function Navbar({ activeSection, darkMode, setDarkMode }) {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -85,10 +87,14 @@ export default function Navbar({ activeSection, darkMode, setDarkMode }) {
           <div className="flex items-center gap-2">
             <Button
               onClick={() => setDarkMode(!darkMode)}
-              className="p-2 rounded-sm"
+              className="p-2 rounded-sm hover:scale-110  transition-all active:scale-90"
               size="icon"
             >
-              {!darkMode ? <SunIcon /> : <MoonIcon />}
+              {!darkMode ? (
+                <SunIcon className=" text-secondary hover:animate-spin" />
+              ) : (
+                <MoonIcon className="hover:animate-shimmer" />
+              )}
             </Button>
             <Link to="https://github.com/jet-black-ninja">
               <Button
