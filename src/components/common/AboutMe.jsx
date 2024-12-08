@@ -5,10 +5,7 @@ import { Button } from "../ui/button";
 import { ArrowRight } from "lucide-react";
 export default function AboutMe() {
   return (
-    <section
-      data-scroll-section
-      className="w-full min-h-screen bg-[#EFEFEF] dark:bg-slate-900 flex items-center justify-center rounded-tl-[40px] md:rounded-tl-[80px] px-4 "
-    >
+    <section className="w-full min-h-screen bg-[#EFEFEF] dark:bg-slate-900 flex items-center justify-center rounded-tl-[40px] md:rounded-tl-[80px] px-4 ">
       <div
         className="max-w-6xl mx-auto flex flex-col-reverse items-center justify-between
     md:flex-row gap-12 mt-4"

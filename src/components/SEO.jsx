@@ -5,7 +5,8 @@ SEO.propTypes = {
   description: PropTypes.string.isRequired,
   path: PropTypes.string.isRequired,
 };
-const SEO = ({ title, description, path }) => {
+
+export default function SEO({ title, description, path }) {
   const baseURL = "www.sachinks.dev";
   return (
     <Helmet>
@@ -17,5 +18,4 @@ const SEO = ({ title, description, path }) => {
       <meta property="og:url" content={`${baseURL}${path}`} />
     </Helmet>
   );
-};
-export default SEO;
+}

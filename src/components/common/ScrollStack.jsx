@@ -37,20 +37,23 @@ export default function ScrollStack({ onSectionChange }) {
     <ReactLenis root options={{ smoothWheel: true }}>
       <main>
         <article>
-          <section className="h-screen top-0 " id="aboutMe">
+          <section className="h-screen sticky lg:sticky top-0 " id="aboutMe">
             <AboutMe />
           </section>
-          <section id="skills" className="h-screen top-0">
+          <section id="skills" className="h-screen sticky lg:sticky top-0">
             <Skills />
           </section>
-          <section id="projects" className="h-screen top-0 ">
+          <section id="projects" className="h-screen sticky lg:sticky top-0 ">
             <Projects />
           </section>
 
-          <section id="experience" className="h-screen  top-0 ">
+          <section
+            id="experience"
+            className="h-screen sticky lg:sticky  top-0 "
+          >
             <Experience />
           </section>
-          <section id="links" className="h-screen top-0">
+          <section id="links" className="h-screen sticky lg:sticky top-0">
             <Links />
           </section>
         </article>

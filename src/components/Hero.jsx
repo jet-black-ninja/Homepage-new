@@ -18,10 +18,7 @@ export default function Hero() {
     "Dynamic",
   ];
   return (
-    <div
-      className="relative min-h-[90vh] flex items-center"
-      data-scroll-section
-    >
+    <div className="relative min-h-[90vh] flex items-center">
       <CanvasCursor />
       <motion.div
         data-scroll

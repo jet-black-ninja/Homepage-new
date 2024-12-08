@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import Navbar from "./components/Navbar";
 import { Route, Routes } from "react-router-dom";
 import Homepage from "./pages/HomePage";
@@ -13,14 +13,13 @@ function App() {
   const [darkMode, setDarkMode] = useState(() => {
     return localStorage.getItem("theme") === "dark";
   });
-  useEffect(() => {
-    const scroll = new LocomotiveScroll({
-      el: document.querySelector("[data-scroll-container]"),
-      smooth: true,
-      offset: 100,
-    });
-    return () => scroll.destroy();
-  });
+  // useEffect(() => {
+  //   const scroll = new LocomotiveScroll({
+  //     el: document.querySelector("[data-scroll-container]"),
+  //     smooth: true,
+  //   });
+  //   return () => scroll.destroy();
+  // });
 
   useEffect(() => {
     if (darkMode) {
@@ -35,7 +34,7 @@ function App() {
   const [activeSection, setActiveSection] = useState("");
 
   return (
-    <div>
+    <>
       <Navbar
         activeSection={activeSection}
         setDarkMode={setDarkMode}
@@ -52,7 +51,7 @@ function App() {
         <Route path="/contact" element={<ContactPage />} />
       </Routes>
       <ResumeActions />
-    </div>
+    </>
   );
 }
 
