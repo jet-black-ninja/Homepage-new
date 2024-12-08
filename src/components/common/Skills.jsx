@@ -1,5 +1,6 @@
+import { useRef } from "react";
 import IconCloud from "../ui/icon-cloud";
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 const iconSlugs = [
   "html5",
   "css3",
@@ -11,7 +12,6 @@ const iconSlugs = [
   "github",
   "mongodb",
   "mysql",
-  "nextjs",
   "nodejs",
   "npm",
   "postgresql",
@@ -24,30 +24,45 @@ const iconSlugs = [
   "amazonwebservices",
   "linux",
   "sass",
+  "reactrouter",
+  "shadcnui",
+  "python",
+  "jest",
+  "neovim",
+  "raspberrypi",
+  "nextJs",
+  "yarn",
 ];
 export default function Skills() {
+  const sectionRef = useRef(null);
+  const isInView = useInView(sectionRef, { once: false, margin: "-100px" });
   return (
     <>
-      <div
+      <motion.section
         data-scroll-section
-        className="flex flex-row justify-around bg-slate-3 h-screen items-center"
+        initial={{ opacity: 0, y: 20 }}
+        animate={isInView ? "visible" : "hidden"}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.3 }}
+        className="flex overflow-hidden mx-auto flex-col justify-around lg:flex-row-reverse
+        bg-zinc-100 dark:bg-zinc-900 items-center width-full min-h-screen"
       >
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="flex justify-center items-center mt-12 text-6xl"
+          transition={{ duration: 0.3, delay: 0.5 }}
+          className="flex justify-center items-center mt-12 text-3xl md:tex-4xl lg:text-5xl font-bold"
         >
           My Skill Set
         </motion.div>
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.3 }}
+          transition={{ duration: 0.5, delay: 0.7 }}
         >
           <IconCloud iconSlugs={iconSlugs} />
         </motion.div>
-      </div>
+      </motion.section>
     </>
   );
 }
