@@ -89,7 +89,7 @@ export default function Projects() {
     setActiveImage(null);
   }, []);
   return (
-    <div className="w-full bg-sky-200 dark:bg-gray-700 min-h-screen rounded-t-[80px] text-black dark:text-white px-4 py-24 ">
+    <div className="w-full bg-fuchsia-100 dark:bg-indigo-950 min-h-screen rounded-t-[80px] text-black dark:text-white px-4 py-24 ">
       <div className="max-w-6xl mx-auto flex flex-col items-center justify-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -98,13 +98,13 @@ export default function Projects() {
           className="mb-10 flex items-center justify-between w-full"
         >
           <div>
-            <h2 className="text-blue-700 dark:text-blue-500 text-4xl font-bold">
+            <h2 className="text-purple-700 dark:text-purple-100 text-4xl font-bold">
               Featured Projects
             </h2>
             <p className=" text-gray-400 tex-lg">Selected Works</p>
           </div>
           <Link
-            className="flex gap-2 hover:border-b border-blue-400 hover:text-blue-400"
+            className="flex gap-2 hover:border-b border-purple-400 hover:text-purple-400"
             to="/projects"
           >
             See All Projects
@@ -134,13 +134,13 @@ export default function Projects() {
                 <span className="text-sm text-gray-500">0{index + 1}</span>
                 <h3 className="text-sm font-medium">{project.alt}</h3>
               </div>
-              <div className="flex items-center justify-between w-full border-b pb-4 group-hover:border-blue-500 transition-colors duration-300">
-                <h2 className="text-sm md:text-xl lg:text-2xl font-light group-hover:text-blue-400 transition-colors duration-300 w-[500px]">
+              <div className="flex items-center justify-between w-full border-b pb-4 group-hover:border-purple-500 transition-colors duration-300">
+                <h2 className="text-sm md:text-xl lg:text-2xl font-light group-hover:text-purple-400 transition-colors duration-300 w-[500px]">
                   {project.description}
                 </h2>
                 <Link
                   to={`/project/${project.slug}`}
-                  className="inline-flex items-center text-blue-500 dark:text-blue-400 hover:text-blue-400 transition-colors duration-300"
+                  className="inline-flex items-center text-purple-500 dark:text-purple-400 hover:text-purple-400 transition-colors duration-300"
                   whileHover={{ x: 5 }}
                   transition={{ type: "spring", stiffness: 400, damping: 10 }}
                 >
