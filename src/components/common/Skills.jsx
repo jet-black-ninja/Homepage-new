@@ -32,6 +32,7 @@ const iconSlugs = [
   "raspberrypi",
   "next-dot-js",
   "yarn",
+  "socket-dot-io",
 ];
 export default function Skills() {
   const sectionRef = useRef(null);

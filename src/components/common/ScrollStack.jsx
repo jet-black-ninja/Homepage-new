@@ -53,7 +53,7 @@ export default function ScrollStack({ onSectionChange }) {
           >
             <Experience />
           </section>
-          <section id="links" className="h-screen sticky lg:sticky top-0">
+          <section id="links" className="sticky lg:sticky md:top-0">
             <Links />
           </section>
         </article>

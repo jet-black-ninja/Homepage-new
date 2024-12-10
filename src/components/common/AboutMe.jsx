@@ -26,7 +26,7 @@ export default function AboutMe() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-xl md:text-3xl lg:text-4xl font-medium leading-right tracking-tight lg:leading-[1.2] max-w-3xl"
           >
-            A passionate full-stack developer and lifelong learner, crafting
+            An innovative full-stack developer and lifelong learner, crafting
             engaging web experiences with TypeScript, React, and a touch of
             creativity.
           </motion.h1>
