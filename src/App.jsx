@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useState } from "react";
 import Navbar from "./components/Navbar";
 import { Route, Routes } from "react-router-dom";
 import Homepage from "./pages/HomePage";
@@ -8,18 +8,10 @@ import AboutPage from "./pages/AboutPage";
 import ContactPage from "./pages/ContactPage";
 import ResumeActions from "./components/common/ResumeActions";
 import "locomotive-scroll/dist/locomotive-scroll.css";
-import LocomotiveScroll from "locomotive-scroll";
 function App() {
   const [darkMode, setDarkMode] = useState(() => {
     return localStorage.getItem("theme") === "dark";
   });
-  // useEffect(() => {
-  //   const scroll = new LocomotiveScroll({
-  //     el: document.querySelector("[data-scroll-container]"),
-  //     smooth: true,
-  //   });
-  //   return () => scroll.destroy();
-  // });
 
   useEffect(() => {
     if (darkMode) {
