@@ -79,7 +79,7 @@ export default function Skills() {
             </motion.div>
             <motion.h1
               variants={headerVariants}
-              className="text-2xl md:text-3xl lg:text-4xl font-medium leading-tight tracking-tight lg:leading-[1.2]  text-black text-center lg:w-[600px]"
+              className="text-2xl md:text-3xl lg:text-4xl font-medium leading-tight tracking-tight lg:leading-[1.2]  text-black dark:text-purple-200 text-center lg:w-[600px]"
             >
               Turning ideas into functional, user-friendly web experiences with
               a blend of logic, creativity, and innovation
