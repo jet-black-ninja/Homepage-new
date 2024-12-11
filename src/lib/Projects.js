@@ -2,7 +2,7 @@ import dsgame from "../assets/images/projects/dsgame.png";
 import cv from "../assets/images/projects/cvmaker.png";
 import bts from "../assets/images/projects/battleship.png";
 import butterfingers from "../assets/images/projects/butterfingers.png";
-export const projects = [
+export const projectData = [
   {
     name: "ButterFingers",
     image: butterfingers,
