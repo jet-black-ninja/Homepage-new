@@ -1,6 +1,9 @@
 import Links from "../components/common/Links";
 import SEO from "../components/SEO";
+import useScrollState from "../hooks/useScrollState";
 export default function ProjectPage() {
+  const { activeProject, activeProjectProgress, onScrollToProject } =
+    useScrollState();
   return (
     <>
       <SEO
@@ -13,9 +16,7 @@ export default function ProjectPage() {
           Projects<span className="text-purple-500">.</span>
         </h2>
       </section>
-      <section className="sticky top-0 min-h-screen w-full flex items-start justify-center bg-zinc-200 dark:bg-zinc-800 rounded-t-[80px] transition-colors ">
-        hallo
-      </section>
+      <section className="sticky top-0 min-h-screen w-full flex items-start justify-center bg-zinc-200 dark:bg-zinc-800 rounded-t-[80px] transition-colors "></section>
       <footer className="group">
         <section className="rounded-t-ful sticky top-10 md:top-01">
           <Links />

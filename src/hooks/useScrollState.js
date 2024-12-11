@@ -1,5 +1,5 @@
 import { useContext, useEffect, useState } from "react";
-import ViewPortContext from "../contexts/viewport.context";
+import { ViewPortContext } from "../contexts/viewport.context.jsx";
 import projectData from "../lib/Projects";
 export default function useScrollState() {
   const { viewPortWidth, viewPortHeight } = useContext(ViewPortContext);

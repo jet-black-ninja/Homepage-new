@@ -4,9 +4,9 @@ const initial = {
   viewPortWidth: window.innerWidth,
   viewPortHeight: window.innerHeight,
 };
-export const ViewPortContext = createContext(initial);
+const ViewPortContext = createContext(initial);
 
-export function ViewPortContextProvider({ children }) {
+function ViewPortContextProvider({ children }) {
   const [viewPort, setViewPort] = useState(initial);
 
   useEffect(() => {
@@ -28,3 +28,4 @@ export function ViewPortContextProvider({ children }) {
     </ViewPortContext.Provider>
   );
 }
+export { ViewPortContext, ViewPortContextProvider };

@@ -4,13 +4,16 @@ import "./index.css";
 import App from "./App.jsx";
 import { HelmetProvider } from "react-helmet-async";
 import { BrowserRouter } from "react-router-dom";
+import { ViewPortContextProvider } from "./contexts/viewport.context";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <HelmetProvider>
-      <BrowserRouter>
-        <App />
-      </BrowserRouter>
+      <ViewPortContextProvider>
+        <BrowserRouter>
+          <App />
+        </BrowserRouter>
+      </ViewPortContextProvider>
     </HelmetProvider>
   </StrictMode>
 );

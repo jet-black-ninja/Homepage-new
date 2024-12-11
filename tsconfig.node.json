@@ -5,5 +5,5 @@
     "module": "CommonJS",
     "types": ["node"]
   },
-  "include": ["src/**/*.ts", "src/**/*.tsx"]
+  "include": ["src/**/*.ts", "src/**/*.tsx", "src/hooks/useScrollState.js"]
 }
