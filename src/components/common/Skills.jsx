@@ -69,7 +69,7 @@ export default function Skills() {
         variants={containerVariants}
         className="flex overflow-hidden mx-auto flex-col justify-around lg:flex-row-reverse rounded-t-[80px] bg-zinc-100 dark:bg-zinc-900 items-center width-full min-h-screen"
       >
-        <div className="flex justify-center items-center h-full px-14">
+        <div className="flex justify-center items-center h-full px-14 sm:py-24">
           <div className="grid gap-8 w-full mx-auto">
             <motion.div
               variants={headerVariants}

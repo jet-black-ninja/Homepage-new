@@ -33,7 +33,7 @@ const ResumeActionsToggle = () => {
     return (
       <button
         onClick={handleDownload}
-        className="flex flex-col items-center justify-center p-2 rounded-full hover:bg-neutral-600 transition-colors"
+        className="flex flex-col items-center justify-center p-2 rounded-md hover:bg-neutral-600 transition-colors"
       >
         <p>Download Resume</p>
         <Download size={32} className="text-white" />

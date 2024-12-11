@@ -61,7 +61,7 @@ const FamilyButtonContainer = ({ isExpanded, toggleExpand, children }) => {
           ? {
               borderRadius: 20,
               width: CONTAINER_SIZE,
-              height: CONTAINER_SIZE + 50,
+              height: CONTAINER_SIZE,
               transition: {
                 type: "spring",
                 damping: 25,

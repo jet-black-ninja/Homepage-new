@@ -1,7 +1,9 @@
 import { motion } from "framer-motion";
-export default function Links() {
+export default function Links({ ...className }) {
   return (
-    <section className="grid place-content-center gap-2 bg-indigo-300 dark:bg-indigo-950 py-24 px-8 text-black rounded-t-[80px]">
+    <section
+      className={`grid place-content-center gap-2 bg-indigo-300 dark:bg-indigo-950 py-24 px-8 text-black rounded-t-[80px] ${className}`}
+    >
       <FlipLink href="https://www.linkedin.com/in/sachin-kumar-singh-133717c/">
         LinkedIn
       </FlipLink>
@@ -20,7 +22,7 @@ const FlipLink = ({ children, href }) => {
       className="relative block overflow-hidden whitespace-nowrap text-4xl font-black uppercase sm:text-7xl md:text-8xl lg:text-9xl"
     >
       <div>
-        {children.split("").map((l, i) => (
+        {children.split("").map((letter, index) => (
           <motion.span
             variants={{
               initial: {
@@ -33,17 +35,17 @@ const FlipLink = ({ children, href }) => {
             transition={{
               duration: DURATION,
               ease: "easeInOut",
-              delay: STAGGER * i,
+              delay: STAGGER * index,
             }}
             className="inline-block "
-            key={i}
+            key={index}
           >
-            {l}
+            {letter}
           </motion.span>
         ))}
       </div>
       <div className="absolute inset-0 mt-2">
-        {children.split("").map((l, i) => (
+        {children.split("").map((letter, index) => (
           <motion.span
             variants={{
               initial: {
@@ -56,12 +58,12 @@ const FlipLink = ({ children, href }) => {
             transition={{
               duration: DURATION,
               ease: "easeInOut",
-              delay: STAGGER * i,
+              delay: STAGGER * index,
             }}
             className="inline-block"
-            key={i}
+            key={index}
           >
-            {l}
+            {letter}
           </motion.span>
         ))}
       </div>

@@ -5,9 +5,6 @@ import { Link } from "react-router-dom";
 import butterfingers from "../../assets/images/projects/butterfingers.png";
 import ecomm from "../../assets/images/projects/ecommerce.png";
 import brolog from "../../assets/images/projects/brolog.png";
-import dsgame from "../../assets/images/projects/dsgame.png";
-import cv from "../../assets/images/projects/cvmaker.png";
-import bts from "../../assets/images/projects/battleship.png";
 const data = [
   {
     id: 1,
@@ -29,27 +26,6 @@ const data = [
     src: brolog,
     description: "A Personal blogging page with dedicated CMS",
     slug: "bro-log-blog",
-  },
-  {
-    id: 4,
-    alt: "Dark Souls Memory Game",
-    src: dsgame,
-    description: "A Dark Souls Themed ,Fan Made Card Memory Game",
-    slug: "ds-memory-game",
-  },
-  {
-    id: 5,
-    alt: "CV-maker",
-    src: cv,
-    description: "A fully featured cv making application made in react",
-    slug: "cv-maker",
-  },
-  {
-    id: 6,
-    alt: "BattleShip",
-    src: bts,
-    description: "The Classic game of Battleships implemented in JS",
-    slug: "battleships-game",
   },
 ];
 export default function Projects() {
