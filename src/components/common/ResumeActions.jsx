@@ -19,6 +19,7 @@ const ResumeActionsToggle = () => {
   const [direction, setDirection] = useState(0);
   const PDF_URL =
     "https://drive.google.com/file/d/1V6aT-29LxmUw0l0J6_AzIRWyc7VYaxSQ/view?usp=drive_link";
+
   const handleDownload = () => {
     try {
       window.open(PDF_URL, "_blank");
@@ -61,11 +62,11 @@ const ResumeActionsToggle = () => {
     <div className="flex flex-col items-center pt-4 text-white">
       <MotionConfig transition={{ duration: 0.4, type: "spring", bounce: 0.2 }}>
         <motion.div
-          className="relative mx-auto my-[10px] w-[60px] md:w-[150px] overflow-hidden"
+          className="relative mx-auto my-[10px] w-[100px] md:w-[150px] overflow-hidden"
           initial="false"
           animate={{ height: bounds.height }}
         >
-          <div className="md:p-6 p2" ref={ref}>
+          <div className="md:p-6 p-2" ref={ref}>
             <AnimatePresence
               custom={direction}
               mode="popLayout"
@@ -79,7 +80,7 @@ const ResumeActionsToggle = () => {
                 custom={direction}
                 onAnimationStart={() => setIsAnimating(true)}
                 onAnimationComplete={() => setIsAnimating(false)}
-                className="flex items-center justify-center"
+                className="flex items-cent justify-center"
               >
                 {content}
               </motion.div>

@@ -13,7 +13,7 @@ export default function ContactPage() {
     window.scrollTo(0, 0);
   }, []);
   return (
-    <>
+    <ReactLenis root>
       <SEO
         title="contact"
         description="Welcome to My portfolio website, I am a full stack developer utilizing MERN stack with typescript to bring ideas to reality"
@@ -37,7 +37,7 @@ export default function ContactPage() {
           )}
         >
           <div>
-            <div className="w-40 rounded-full bg-[#d4d4d4] mx-auto">
+            <div className="w-40 rounded-full bg-[#ffffff71] mx-auto">
               <img
                 src={shakeHand}
                 alt="hand shake image"
@@ -80,6 +80,6 @@ export default function ContactPage() {
           <Links />
         </section>
       </ReactLenis>
-    </>
+    </ReactLenis>
   );
 }

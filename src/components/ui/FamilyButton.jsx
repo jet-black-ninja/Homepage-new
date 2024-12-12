@@ -77,6 +77,7 @@ const FamilyButtonContainer = ({ isExpanded, toggleExpand, children }) => {
       }
     >
       {children}
+
       <motion.div
         className="absolute"
         initial={{ x: "-50%" }}
@@ -122,13 +123,21 @@ const FamilyButtonContainer = ({ isExpanded, toggleExpand, children }) => {
             layoutId="expand-toggle"
             initial={{ rotate: 180 }}
             animate={{
-              rotate: -180,
+              rotate: -360,
               transition: {
                 duration: 0.4,
               },
             }}
           >
-            <PlusIcon className="h-7 w-7 text-black dark:text-neutral-900" />
+            <motion.div
+              initial={{ opacity: 0, y: 20, rotate: 180 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.5, duration: 0.3 }}
+              className="absolute text-black  bg-zinc-200 dark:bg-violet-500 rounded-xl px-2 left-[-15px] top-[-40px] animate-bounce transition-colors"
+            >
+              Resume
+            </motion.div>
+            <PlusIcon className="h-7 w-7 text-black dark:text-neutral-900" />{" "}
           </motion.div>
         )}
       </motion.div>

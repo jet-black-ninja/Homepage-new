@@ -8,25 +8,23 @@ export default function useScrollState() {
   const [activeProjectProgress, setActiveProjectProgress] = useState(0);
 
   const updateProjectPosition = () => {
-    const firstProject = document.GetElementById(projectData[0].id);
-    const firstProjectPos =
-      firstProject.getBondingClientRect().top +
-      document.documentElement.scrollTop;
-    const positions = [
-      firstProjectPos,
-      firstProjectPos + firstProject.clientHeight,
-    ];
-
-    for (let i = 1; projectData.length; i++) {
-      const project = document.getElementById(projectData[i].id);
-      positions.push(
-        project.getBoundingClientRect().top +
-          document.documentElement.scrollTop +
-          project.clientHeight
-      );
-    }
-
-    setProjectPosition(positions);
+    // const firstProject = document.getElementById(projectData[0].id);
+    // const firstProjectPos =
+    //   firstProject.getBondingClientRect().top +
+    //   document.documentElement.scrollTop;
+    // const positions = [
+    //   firstProjectPos,
+    //   firstProjectPos + firstProject.clientHeight,
+    // ];
+    // for (let i = 1; projectData.length; i++) {
+    //   const project = document.getElementById(projectData[i].id);
+    //   positions.push(
+    //     project.getBoundingClientRect().top +
+    //       document.documentElement.scrollTop +
+    //       project.clientHeight
+    //   );
+    // }
+    // setProjectPosition(positions);
   };
 
   useEffect(() => {
