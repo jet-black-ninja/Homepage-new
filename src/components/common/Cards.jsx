@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
-import coffee from "../../assets/images/aboutme/coffee.png";
+import coffee from "../../assets/images/aboutme/coffee.svg";
 import react from "../../assets/images/aboutme/react.png";
 import dumbbell from "../../assets/images/aboutme/dumbbell.png";
 import study from "../../assets/images/aboutme/study.jpg";
@@ -96,7 +96,7 @@ const Card = ({ src, alt, rotate, top, left, containerRef, className }) => {
       dragConstraints={containerRef}
       dragElastic={0.65}
       className={twMerge(
-        "drag-elements absolute w-48 bg-neutral-200  flex items-center justify-center p-1 pb-4",
+        "drag-elements absolute rounded-xl bg-zinc-200 dark:bg-slate-700 self-center p-1 ",
         className
       )}
     />
