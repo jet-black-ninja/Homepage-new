@@ -3,7 +3,6 @@ import Navbar from "./components/Navbar";
 import { Route, Routes } from "react-router-dom";
 import Homepage from "./pages/HomePage";
 import ProjectPage from "./pages/ProjectPage";
-import ProjectDetails from "./pages/ProjectDetails";
 import AboutPage from "./pages/AboutPage";
 import ContactPage from "./pages/ContactPage";
 import ResumeActions from "./components/common/ResumeActions";
@@ -38,7 +37,6 @@ function App() {
           element={<Homepage setActiveSection={setActiveSection} />}
         />
         <Route path="/projects" element={<ProjectPage />} />
-        <Route path="/projects/:slug" element={<ProjectDetails />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/contact" element={<ContactPage />} />
       </Routes>
