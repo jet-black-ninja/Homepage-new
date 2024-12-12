@@ -25,7 +25,7 @@ export default function FamilyButton({ children }) {
           : "dark:from-neutral-900 dark: to-stone-950 bg-gradient-to-b"
       )}
     >
-      <div className="rounded-[23px] border border-black/10">
+      <div className="rounded-[23px] border border-black/10 ">
         <div className="rounded-[22px] border dark:border-stone-800 border-white/50">
           <div className="rounded-[21px] border border-neutral-950/20 flex items-center justify-center">
             <FamilyButtonContainer
@@ -133,11 +133,11 @@ const FamilyButtonContainer = ({ isExpanded, toggleExpand, children }) => {
               initial={{ opacity: 0, y: 20, rotate: 180 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5, duration: 0.3 }}
-              className="absolute text-black  bg-zinc-200 dark:bg-violet-500 rounded-xl px-2 left-[-15px] top-[-40px] animate-bounce transition-colors"
+              className="absolute text-black  bg-zinc-200 dark:bg-violet-500 rounded-xl px-2 py-1 left-[-12px] top-[-40px] animate-bounce transition-colors"
             >
               Resume
             </motion.div>
-            <PlusIcon className="h-7 w-7 text-black dark:text-neutral-900" />{" "}
+            <PlusIcon className="h-7 w-7 text-black dark:text-neutral-900 m-[3px]" />{" "}
           </motion.div>
         )}
       </motion.div>

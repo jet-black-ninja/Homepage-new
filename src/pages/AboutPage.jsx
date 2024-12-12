@@ -69,7 +69,7 @@ export default function AboutPage() {
                 words={words}
                 className="bg-gradient-to-r from-rose-600 to-rose-400 text-white px-4 py-2 rounded-xl shadow-lg"
               />{" "}
-              <p className="block mt-4">
+              <p className="block mt-4 leading-snug">
                 A software engineer Living in Noida,
                 <br />
                 making Interactive ,Intuitive and enjoyable web apps which get
