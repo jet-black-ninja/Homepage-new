@@ -1,6 +1,4 @@
 import { useEffect } from "react";
-import { motion } from "framer-motion";
-import { twMerge } from "tailwind-merge";
 import Links from "../components/common/Links";
 import SEO from "../components/SEO";
 import ScrollElement from "../components/ui/ScrollElement";
@@ -49,7 +47,7 @@ export default function AboutPage() {
         path="/about"
       />
 
-      <section className=" top-0 grid min-h-screen w-full place-content-center overflow-hidden bg-white  dark:bg-neutral-950">
+      <section className="top-0 grid w-full min-h-screen overflow-hidden bg-white  place-content-center dark:bg-neutral-950">
         <h2 className="relative z-0 text-[14vw] font-black text-neutral-800 md:text-[200px]">
           Sachin<span className="text-rose-800">.</span>
         </h2>
@@ -57,17 +55,17 @@ export default function AboutPage() {
       </section>
 
       <div className=" top-10 overflow-hidden min-h-screen bg-white dark:bg-zinc-950 rounded-t-[80px]">
-        <div className="max-w-4xl mx-auto px-4 py-20 space-y-32">
+        <div className="max-w-4xl px-4 py-20 mx-auto space-y-32">
           <ScrollElement
             direction="top"
             viewport={{ amount: 0.3, margin: "0px 0px 0px 0px" }}
             className="flex flex-col items-start"
           >
-            <div className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight text-gray-900 dark:text-white p-8">
+            <div className="p-8 text-3xl font-bold leading-tight text-gray-900 md:text-4xl lg:text-5xl dark:text-white">
               I&apos;m Sachin,{" "}
               <FlipWords
                 words={words}
-                className="bg-gradient-to-r from-rose-600 to-rose-400 text-white px-4 py-2 rounded-xl shadow-lg"
+                className="px-4 py-2 text-white shadow-lg bg-gradient-to-r from-rose-600 to-rose-400 rounded-xl"
               />{" "}
               <p className="block mt-4 leading-snug">
                 A software engineer Living in Noida,
@@ -81,8 +79,8 @@ export default function AboutPage() {
             direction="top"
             viewport={{ amount: 0.3, margin: "0px 0px 0px 0px" }}
           >
-            <div className="p-8 rounded-2xl transition-all duration-500 ">
-              <p className="text-xl md:text-2xl lg:text-3xl leading-relaxed text-gray-800 dark:text-gray-200">
+            <div className="p-8 transition-all duration-500 rounded-2xl ">
+              <p className="text-xl leading-relaxed text-gray-800 md:text-2xl lg:text-3xl dark:text-gray-200">
                 As a{" "}
                 <span className="font-semibold text-cyan-600">
                   Full Stack Developer
@@ -101,7 +99,7 @@ export default function AboutPage() {
             className="group"
           >
             <div className="p-8 rounded-2xl">
-              <p className="text-xl md:text-2xl lg:text-3xl leading-relaxed ">
+              <p className="text-xl leading-relaxed md:text-2xl lg:text-3xl ">
                 With expertise in{" "}
                 <span className="font-semibold text-cyan-400">React.js</span>,{" "}
                 <span className="font-semibold text-green-400">Node.js</span>,

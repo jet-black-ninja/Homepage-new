@@ -1,4 +1,4 @@
-import { useContext, useRef } from "react";
+import { useContext, useEffect, useRef } from "react";
 import Links from "../../components/common/Links";
 import SEO from "../../components/SEO";
 import useScrollState from "../../hooks/useScrollState";
@@ -14,6 +14,9 @@ export default function ProjectPage() {
     useScrollState();
   const { viewPortWidth } = useContext(ViewPortContext);
   const sectionRef = useRef(null);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <SEO
@@ -21,7 +24,7 @@ export default function ProjectPage() {
         description="Welcome to my Portfolio website,These are my Full stack projects implemented with modern web technologies and best practices"
         path="/projects"
       />
-      <section className="sticky grid min-h-screen w-ful place-content-center overflow-hidden top-0">
+      <section className="sticky top-0 grid min-h-screen overflow-hidden w-ful place-content-center">
         <h2 className="relative z-0 text-[14vw] font-black text-neutral-800 dark:text-neutral-300 md:text-[200px]">
           Projects<span className="text-purple-500">.</span>
         </h2>
@@ -34,10 +37,23 @@ export default function ProjectPage() {
           <div className={styles.projects}>
             <div className={styles.descriptions}>
               {projectData.map((project, index) => (
-                <Description key={index} />
+                <Description
+                  key={index}
+                  id={project.id}
+                  title={project.title}
+                  description={project.description}
+                  tags={project.tags}
+                  code={project.code}
+                  demo={project.demo}
+                  color={project.color}
+                  isActive={index === activeProject}
+                  projectIndex={index}
+                  onScrollToProject={onScrollToProject}
+                  className={styles.description}
+                />
               ))}
             </div>
-            {viewPortWidth >> 800 && <Visual />}
+            {viewPortWidth > 800 && <Visual />}
           </div>
         </ContentWrapper>
         {viewPortWidth <= 800 && activeProject !== null && (
@@ -52,7 +68,7 @@ export default function ProjectPage() {
         )}
       </section>
       <footer className="group">
-        <section className="rounded-t-ful sticky top-10 md:top-01">
+        <section className="sticky rounded-t-ful top-10 md:top-01">
           <Links />
         </section>
       </footer>

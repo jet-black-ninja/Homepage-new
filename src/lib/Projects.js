@@ -2,9 +2,10 @@ import dsgame from "../assets/images/projects/dsgame.png";
 import cv from "../assets/images/projects/cvmaker.png";
 import bts from "../assets/images/projects/battleship.png";
 import butterfingers from "../assets/images/projects/butterfingers.png";
-const projectData = [
+const projectsData = [
   {
-    name: "ButterFingers",
+    id: "ButterFingers",
+    title: "ButterFingers",
     image: butterfingers,
     video: "",
     description: [
@@ -34,31 +35,31 @@ const projectData = [
     color: "254, 105, 105",
     colorLight: "rgba(254, 105, 105, .125)",
   },
-  {
-    name: "CV-maker",
-    image: cv,
-    video: "",
-    description: ["A fully featured cv making application made in react"],
-    tags: [
-      "MERN(MongoDB, Express, React, Node.Js",
-      "TypeScript",
-      "React-Router-Dom",
-    ],
-    demo: "",
-    code: "",
-    color: "",
-    colorLight: "",
-  },
-  {
-    name: "Dark Souls Memory Game",
-    image: dsgame,
-    video: "",
-    description: ["A Dark Souls Themed ,Fan Made Card Memory Game"],
-    tags: ["", "", ""],
-    demo: "",
-    code: "",
-    color: "",
-    colorLight: "",
-  },
+  // {
+  //   id: "CV-maker",
+  //   image: cv,
+  //   video: "",
+  //   description: ["A fully featured cv making application made in react"],
+  //   tags: [
+  //     "MERN(MongoDB, Express, React, Node.Js",
+  //     "TypeScript",
+  //     "React-Router-Dom",
+  //   ],
+  //   demo: "",
+  //   code: "",
+  //   color: "",
+  //   colorLight: "",
+  // },
+  // {
+  //   id: "Ds-Game",
+  //   image: dsgame,
+  //   video: "",
+  //   description: ["A Dark Souls Themed ,Fan Made Card Memory Game"],
+  //   tags: ["", "", ""],
+  //   demo: "",
+  //   code: "",
+  //   color: "",
+  //   colorLight: "",
+  // },
 ];
-export default projectData;
+export default projectsData;
