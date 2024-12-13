@@ -44,7 +44,7 @@ export default function ContactPage() {
                 className="w-40 mx-auto"
               />
             </div>
-            <h3 className="text-6xl max-w-xl mx-auto text-center font-bold my-4 text-[#333]">
+            <h3 className="text-6xl max-w-xl mx-auto text-center font-bold my-4 text-[#333] leading-snug ">
               Lets Get Together and Build
             </h3>
             <div className="flex justify-center space-x-4">

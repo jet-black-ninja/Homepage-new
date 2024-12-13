@@ -68,12 +68,12 @@ export default function Navbar({ activeSection, darkMode, setDarkMode }) {
                       variant="ghost"
                       className={`text-sm transition-all duration-300 font-medium ${
                         activeSection === "aboutMe"
-                          ? "text-violet-500"
+                          ? "text-violet-700"
                           : activeSection === "projects"
                           ? "text-blue-500"
                           : activeSection === "skills"
-                          ? "text-emerald-600"
-                          : "text-purple-300"
+                          ? "text-amber-400"
+                          : "text-purple-600"
                       }`}
                       onClick={playClickSound}
                     >

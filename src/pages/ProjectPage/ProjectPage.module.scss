@@ -1,0 +1,58 @@
+.wrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  padding-left: 30px;
+  padding-top: 75px;
+  @media (max-width: 800px) {
+    padding-left: 0;
+  }
+}
+
+.projects {
+  display: flex;
+  justify-content: space-between;
+  --visual-width: 720px;
+  --visual-height: calc(var(--visual-width) / 1.6);
+  @media (max-width: 1335px) {
+    --visual-width: 50vw;
+  }
+  @media (max-width: 900px) {
+    --visual-width: 49vw;
+  }
+  @media (max-width: 850px) {
+    --visual-width: 45vw;
+  }
+  @media (max-width: 800px) {
+    flex-direction: column-reverse;
+  }
+}
+.descriptions {
+  width: 40%;
+  & > * {
+    padding: 100px 0;
+  }
+  @media (max-width: 1000px) {
+    width: 42%;
+  }
+
+  @media (max-width: 850px) {
+    width: 45%;
+  }
+
+  @media (max-width: 800px) {
+    width: 100%;
+  }
+}
+.progressBarWrapper {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+.progressBar {
+  --gap: 7px;
+  height: 31px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 9px;
+}

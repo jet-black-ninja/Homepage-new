@@ -118,12 +118,12 @@ const FamilyButtonContainer = ({ isExpanded, toggleExpand, children }) => {
             className={cn(
               "p-[11px] group bg-neutral-200 dark:bg-violet-500/90 text-cyan-50 border border-cyan-100/10  shadow-2xl transition-colors duration-200"
             )}
-            style={{ borderRadius: 24 }}
+            style={{ borderRadius: 60 }}
             onClick={toggleExpand}
             layoutId="expand-toggle"
             initial={{ rotate: 180 }}
             animate={{
-              rotate: -360,
+              rotate: 0,
               transition: {
                 duration: 0.4,
               },

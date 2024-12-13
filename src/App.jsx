@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import Navbar from "./components/Navbar";
 import { Route, Routes } from "react-router-dom";
 import Homepage from "./pages/HomePage";
-import ProjectPage from "./pages/ProjectPage";
+import ProjectPage from "./pages/ProjectPage/ProjectPage";
 import AboutPage from "./pages/AboutPage";
 import ContactPage from "./pages/ContactPage";
 import ResumeActions from "./components/common/ResumeActions";

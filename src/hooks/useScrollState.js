@@ -1,41 +1,55 @@
 import { useContext, useEffect, useState } from "react";
 import { ViewPortContext } from "../contexts/viewport.context.jsx";
-import projectData from "../lib/Projects";
+import projectsData from "../lib/Projects";
 export default function useScrollState() {
   const { viewPortWidth, viewPortHeight } = useContext(ViewPortContext);
-  const [projectPositions, setProjectPosition] = useState([]);
+  const [projectPositions, setProjectPositions] = useState([]);
   const [activeProject, setActiveProject] = useState(null);
   const [activeProjectProgress, setActiveProjectProgress] = useState(0);
+  //TODO reenable this
+  const updateProjectPositions = () => {
+    try {
+      // Check if projectsData exists and has elements
+      if (!projectsData || projectsData.length === 0) {
+        console.warn("No projects data available");
+        return;
+      }
 
-  const updateProjectPosition = () => {
-    // const firstProject = document.getElementById(projectData[0].id);
-    // const firstProjectPos =
-    //   firstProject.getBondingClientRect().top +
-    //   document.documentElement.scrollTop;
-    // const positions = [
-    //   firstProjectPos,
-    //   firstProjectPos + firstProject.clientHeight,
-    // ];
-    // for (let i = 1; projectData.length; i++) {
-    //   const project = document.getElementById(projectData[i].id);
-    //   positions.push(
-    //     project.getBoundingClientRect().top +
-    //       document.documentElement.scrollTop +
-    //       project.clientHeight
-    //   );
-    // }
-    // setProjectPosition(positions);
+      const positions = [];
+
+      for (let i = 0; i < projectsData.length; i++) {
+        const project = document.getElementById(projectsData[i].id);
+
+        // Skip if the project element doesn't exist
+        if (!project) {
+          console.warn(
+            `Project element with id ${projectsData[i].id} not found`
+          );
+          continue;
+        }
+
+        const projectPos =
+          project.getBoundingClientRect().top +
+          document.documentElement.scrollTop;
+
+        positions.push(projectPos + project.clientHeight);
+      }
+
+      setProjectPositions(positions);
+    } catch (error) {
+      console.error("Error in updateProjectPositions:", error);
+    }
   };
 
   useEffect(() => {
     const timeout = setTimeout(() => {
-      updateProjectPosition();
+      updateProjectPositions();
     }, 3000);
     return () => clearTimeout(timeout);
   }, []);
 
   useEffect(() => {
-    updateProjectPosition();
+    updateProjectPositions();
   }, [viewPortHeight, viewPortWidth]);
 
   useEffect(() => {
@@ -46,7 +60,7 @@ export default function useScrollState() {
       if (
         projectPositions.length > 0 &&
         (centerPos < projectPositions[0] ||
-          centerPos > projectData[projectPositions.length - 1])
+          centerPos > projectsData[projectPositions.length - 1])
       ) {
         setActiveProject(null);
       } else {
