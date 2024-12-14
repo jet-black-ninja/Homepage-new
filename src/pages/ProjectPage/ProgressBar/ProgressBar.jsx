@@ -27,6 +27,11 @@ export default function ProgressBar({
                 : ""
               : ""
           }`}
+          style={
+            i < (activeProject || 0)
+              ? { backgroundColor: `rgb(${project.color})` }
+              : undefined
+          }
           onClick={() => onScrollToProject(i)}
         >
           <span className={styles["progress__bar-title"]}>{project.title}</span>
