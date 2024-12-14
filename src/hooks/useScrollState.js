@@ -3,11 +3,10 @@ import { ViewPortContext } from "@/contexts/viewport.context";
 import projectsData from "@/lib/Projects";
 
 export default function useScrollState() {
-  const { viewportWidth, viewportHeight } = useContext(ViewPortContext);
+  const { viewPortWidth, viewPortHeight } = useContext(ViewPortContext);
   const [projectPositions, setProjectPositions] = useState([]);
   const [activeProject, setActiveProject] = useState(null);
   const [activeProjectProgress, setActiveProjectProgress] = useState(0);
-
   const updateProjectPositions = () => {
     const firstProject = document.getElementById(projectsData[0].id);
 
@@ -22,14 +21,12 @@ export default function useScrollState() {
 
     for (let i = 1; i < projectsData.length; i++) {
       const project = document.getElementById(projectsData[i].id);
-
       positions.push(
         project.getBoundingClientRect().top +
           document.documentElement.scrollTop +
           project.clientHeight
       );
     }
-
     setProjectPositions(positions);
   };
 
@@ -45,14 +42,14 @@ export default function useScrollState() {
 
   useEffect(() => {
     updateProjectPositions();
-  }, [viewportWidth, viewportHeight]);
+  }, [viewPortWidth, viewPortHeight]);
 
   useEffect(() => {
     const handleProject = () => {
-      //TODO cannot find center position
+      console.log(viewPortHeight);
       const centerPos =
         (document.documentElement.scrollTop || document.body.scrollTop) +
-        viewportHeight / 2;
+        viewPortHeight / 2;
       if (
         projectPositions.length > 0 &&
         (centerPos < projectPositions[0] ||
@@ -63,6 +60,7 @@ export default function useScrollState() {
         const index = projectPositions.findIndex((pos) => {
           return centerPos < pos;
         });
+
         if (index !== -1) {
           setActiveProject(index - 1);
 
@@ -96,7 +94,7 @@ export default function useScrollState() {
         (projectPositions[activeProject + 1] -
           projectPositions[activeProject]) /
           2 -
-        viewportHeight / 2,
+        viewPortHeight / 2,
     });
   };
 

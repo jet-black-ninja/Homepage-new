@@ -31,7 +31,7 @@ export default function ProjectPage() {
       </section>
       <section
         ref={sectionRef}
-        className="sticky top-0 w-full min-h-screen flex items-start justify-center bg-indigo-100 dark:bg-slate-800 rounded-t-[80px] transition-colors "
+        className="top-0 w-full min-h-screen flex items-start justify-center bg-indigo-100 dark:bg-[#0f111a] rounded-t-[80px] transition-colors "
       >
         <ContentWrapper className={styles.wrapper}>
           <div className={styles.projects}>
@@ -73,11 +73,9 @@ export default function ProjectPage() {
           </div>
         )}
       </section>
-      {/* <footer className="sticky group">
-        <section className="top-[-200px] ">
-          <Links className="rounded-e-none" />
-        </section>
-      </footer> */}
+      <footer className=" group">
+        <Links className="rounded-e-none" />
+      </footer>
     </>
   );
 }

@@ -1,14 +1,16 @@
 import { createContext, useEffect, useState } from "react";
 
 const initial = {
-  viewPortWidth: window.innerWidth,
-  viewPortHeight: window.innerHeight,
+  viewportWidth: window.innerWidth,
+  viewportHeight: window.innerHeight,
 };
 const ViewPortContext = createContext(initial);
 
 function ViewPortContextProvider({ children }) {
-  const [viewPort, setViewPort] = useState(initial);
-
+  const [viewPort, setViewPort] = useState({
+    width: initial.viewportWidth,
+    height: initial.viewportHeight,
+  });
   useEffect(() => {
     const handleResize = () => {
       setViewPort({ width: window.innerWidth, height: window.innerHeight });
@@ -19,7 +21,6 @@ function ViewPortContextProvider({ children }) {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
-
   return (
     <ViewPortContext.Provider
       value={{ viewPortWidth: viewPort.width, viewPortHeight: viewPort.height }}
