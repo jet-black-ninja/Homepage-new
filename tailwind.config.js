@@ -1,5 +1,5 @@
 import { fontFamily } from "tailwindcss/defaultTheme";
-
+const plugin = require("tailwindcss/plugin");
 /** @type {import('tailwindcss').Config} */
 export default {
   darkMode: ["class"],
@@ -104,6 +104,23 @@ export default {
       },
     },
   },
-  // eslint-disable-next-line no-undef
-  plugins: [require("tailwindcss-animate")],
+
+  plugins: [
+    // eslint-disable-next-line no-undef
+    require("tailwindcss-animate"),
+    plugin(({ theme, addUtilities }) => {
+      const neonUtilities = {};
+      const colors = theme("colors");
+      for (const color in colors) {
+        if (typeof colors[color] === "object") {
+          const color1 = colors[color]["500"];
+          const color2 = colors[color]["700"];
+          neonUtilities[`.neon-${color}`] = {
+            boxShadow: `0 0 5px ${color1}, 0 0 20px ${color2}`,
+          };
+        }
+      }
+      addUtilities(neonUtilities);
+    }),
+  ],
 };

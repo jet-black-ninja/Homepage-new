@@ -8,37 +8,28 @@ export default function useScrollState() {
   const [activeProjectProgress, setActiveProjectProgress] = useState(0);
   //TODO reenable this
   const updateProjectPositions = () => {
-    try {
-      // Check if projectsData exists and has elements
-      if (!projectsData || projectsData.length === 0) {
-        console.warn("No projects data available");
-        return;
-      }
+    const firstProject = document.getElementById(projectsData[0].id);
 
-      const positions = [];
+    const firstProjectPos =
+      firstProject.getBoundingClientRect().top +
+      document.documentElement.scrollTop;
 
-      for (let i = 0; i < projectsData.length; i++) {
-        const project = document.getElementById(projectsData[i].id);
+    const positions = [
+      firstProjectPos,
+      firstProjectPos + firstProject.clientHeight,
+    ];
 
-        // Skip if the project element doesn't exist
-        if (!project) {
-          console.warn(
-            `Project element with id ${projectsData[i].id} not found`
-          );
-          continue;
-        }
+    for (let i = 1; i < projectsData.length; i++) {
+      const project = document.getElementById(projectsData[i].id);
 
-        const projectPos =
-          project.getBoundingClientRect().top +
-          document.documentElement.scrollTop;
-
-        positions.push(projectPos + project.clientHeight);
-      }
-
-      setProjectPositions(positions);
-    } catch (error) {
-      console.error("Error in updateProjectPositions:", error);
+      positions.push(
+        project.getBoundingClientRect().top +
+          document.documentElement.scrollTop +
+          project.clientHeight
+      );
     }
+
+    setProjectPositions(positions);
   };
 
   useEffect(() => {
