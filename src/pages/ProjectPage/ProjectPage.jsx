@@ -17,7 +17,6 @@ export default function ProjectPage() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-  console.log(activeProject);
   return (
     <>
       <SEO
@@ -54,13 +53,13 @@ export default function ProjectPage() {
                 />
               ))}
             </div>
-            {viewPortWidth >= 800 ? (
+            {viewPortWidth >= 800 && (
               <Visual
                 activeProject={activeProject}
                 activeProjectProgress={activeProjectProgress}
                 onScrollToProject={onScrollToProject}
               />
-            ) : null}
+            )}
           </div>
         </ContentWrapper>
         {viewPortWidth <= 800 && activeProject !== null && (

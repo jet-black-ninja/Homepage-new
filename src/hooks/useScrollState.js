@@ -1,12 +1,13 @@
 import { useContext, useEffect, useState } from "react";
-import { ViewPortContext } from "../contexts/viewport.context.jsx";
-import projectsData from "../lib/Projects";
+import { ViewPortContext } from "@/contexts/viewport.context";
+import projectsData from "@/lib/Projects";
+
 export default function useScrollState() {
-  const { viewPortWidth, viewPortHeight } = useContext(ViewPortContext);
+  const { viewportWidth, viewportHeight } = useContext(ViewPortContext);
   const [projectPositions, setProjectPositions] = useState([]);
   const [activeProject, setActiveProject] = useState(null);
   const [activeProjectProgress, setActiveProjectProgress] = useState(0);
-  //TODO reenable this
+
   const updateProjectPositions = () => {
     const firstProject = document.getElementById(projectsData[0].id);
 
@@ -36,34 +37,38 @@ export default function useScrollState() {
     const timeout = setTimeout(() => {
       updateProjectPositions();
     }, 3000);
-    return () => clearTimeout(timeout);
+
+    return () => {
+      clearTimeout(timeout);
+    };
   }, []);
 
   useEffect(() => {
     updateProjectPositions();
-  }, [viewPortHeight, viewPortWidth]);
+  }, [viewportWidth, viewportHeight]);
 
   useEffect(() => {
     const handleProject = () => {
+      //TODO cannot find center position
       const centerPos =
         (document.documentElement.scrollTop || document.body.scrollTop) +
-        viewPortHeight / 2;
+        viewportHeight / 2;
       if (
         projectPositions.length > 0 &&
         (centerPos < projectPositions[0] ||
-          centerPos > projectsData[projectPositions.length - 1])
+          centerPos > projectPositions[projectPositions.length - 1])
       ) {
         setActiveProject(null);
       } else {
         const index = projectPositions.findIndex((pos) => {
           return centerPos < pos;
         });
-        if (index !== 1) {
+        if (index !== -1) {
           setActiveProject(index - 1);
+
           setActiveProjectProgress(
-            centerPos -
-              projectPositions[index - 1] /
-                (projectPositions[index] - projectPositions[index - 1])
+            (centerPos - projectPositions[index - 1]) /
+              (projectPositions[index] - projectPositions[index - 1])
           );
         }
       }
@@ -72,11 +77,15 @@ export default function useScrollState() {
     const onScroll = () => {
       handleProject();
     };
+
     onScroll();
+
     document.addEventListener("scroll", onScroll);
+
     return () => {
       document.removeEventListener("scroll", onScroll);
     };
+
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [projectPositions]);
 
@@ -87,9 +96,10 @@ export default function useScrollState() {
         (projectPositions[activeProject + 1] -
           projectPositions[activeProject]) /
           2 -
-        viewPortHeight / 2,
+        viewportHeight / 2,
     });
   };
+
   return {
     activeProject,
     activeProjectProgress,
