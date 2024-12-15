@@ -37,7 +37,7 @@ export default function Hero() {
                 initial={{ opacity: 0, scale: 0.5 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 0.2 }}
-                className="inline-block px-4 py-1.5 rounded-full bg-purple-300/50 text-primary text-xs  md:text-sm lg:text-sm font-small z-10"
+                className="inline-block px-4 py-1.5 rounded-full bg-purple-300/50 text-primary text-xs  md:text-sm lg:text-sm font-small z-10 lg:mb-3"
               >
                 Available for Freelance & Full-Time Opportunities
               </motion.div>

@@ -14,6 +14,8 @@ import { BsGithub } from "react-icons/bs";
 import { MdMenuOpen } from "react-icons/md";
 import PropTypes from "prop-types";
 import { MoonIcon, SunIcon } from "lucide-react";
+import { HiMiniDocumentArrowDown } from "react-icons/hi2";
+
 const navLinks = [
   { id: "1", name: "Home", href: "/" },
   { id: "2", name: "Projects", href: "/projects" },
@@ -28,10 +30,22 @@ Navbar.propTypes = {
 export default function Navbar({ activeSection, darkMode, setDarkMode }) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
+  const PDF_URL =
+    "https://drive.google.com/file/d/1V6aT-29LxmUw0l0J6_AzIRWyc7VYaxSQ/view?usp=drive_link";
 
   const playClickSound = () => {
     const audio = new Audio("/src/assets/sfx/click2.mp3");
     audio.play();
+  };
+  const handleDownload = () => {
+    try {
+      window.open(PDF_URL, "_blank");
+    } catch (error) {
+      console.error("Error in download handler:", error);
+      alert(
+        "Sorry, there was an error downloading the resume. Please try again later."
+      );
+    }
   };
   useEffect(() => {
     const handleScroll = () => {
@@ -66,7 +80,7 @@ export default function Navbar({ activeSection, darkMode, setDarkMode }) {
                   <Link key={item.id} to={item.href}>
                     <Button
                       variant="ghost"
-                      className={`text-sm transition-all duration-300 font-medium ${
+                      className={`text-sm transition-all duration-300 font-medium rounded-3xl ${
                         activeSection === "aboutMe"
                           ? "text-violet-700"
                           : activeSection === "projects"
@@ -85,6 +99,16 @@ export default function Navbar({ activeSection, darkMode, setDarkMode }) {
             </div>
           </div>
           <div className="flex items-center gap-2">
+            <Button
+              className="font-bold rounded-full active:scale-95  hover:shadow-purple-600 animate-shake delay-500"
+              onClick={() => {
+                playClickSound();
+                handleDownload();
+              }}
+            >
+              <HiMiniDocumentArrowDown size="2" />
+              Resume
+            </Button>
             <Button
               onClick={() => setDarkMode(!darkMode)}
               className="p-2 rounded-sm hover:scale-110  transition-all active:scale-90"

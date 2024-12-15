@@ -14,7 +14,7 @@ export default function Homepage({ setActiveSection }) {
         description="Welcome to My portfolio website, I am a full stack developer utilizing MERN stack with typescript to bring ideas to reality"
         path="/"
       />
-      <Banner />
+      {/* <Banner /> */}
       <Hero />
       <ScrollStack onSectionChange={setActiveSection} />
     </div>

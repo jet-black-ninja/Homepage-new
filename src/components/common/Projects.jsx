@@ -11,21 +11,21 @@ const data = [
     alt: "ButterFingers",
     src: butterfingers,
     description: "A Typing App Inspired By MonkeyType",
-    slug: "typing-app",
+    link: "https://butterfingers.vercel.app/",
   },
   {
     id: 2,
     alt: "E-Commerce Website",
     src: ecomm,
     description: "An ECommerce Website made with ShadCn/UI",
-    slug: "e-commerce-website",
+    link: "https://ecommerce-frontend-ts-tw-shcnui.vercel.app",
   },
   {
     id: 3,
     alt: "Bro-Log",
     src: brolog,
     description: "A Personal blogging page with dedicated CMS",
-    slug: "bro-log-blog",
+    link: "https://bro-log-client.vercel.app/#/latest",
   },
 ];
 export default function Projects() {
@@ -115,7 +115,8 @@ export default function Projects() {
                   {project.description}
                 </h2>
                 <Link
-                  to={`/project/${project.slug}`}
+                  to={`${project.link}`}
+                  target="_black"
                   className="inline-flex items-center text-purple-500 dark:text-purple-400 hover:text-purple-400 transition-colors duration-300"
                   whileHover={{ x: 5 }}
                   transition={{ type: "spring", stiffness: 400, damping: 10 }}

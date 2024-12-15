@@ -1,3 +1,4 @@
+import { transform } from "framer-motion";
 import { fontFamily } from "tailwindcss/defaultTheme";
 const plugin = require("tailwindcss/plugin");
 /** @type {import('tailwindcss').Config} */
@@ -20,6 +21,7 @@ export default {
         meteor: "meteor 5s linear infinite",
         shimmer: "shimmer 8s infinite",
         "logo-cloud": "logo-cloud 30s linear infinite",
+        shake: "shake 2s ease-out ",
       },
       keyframes: {
         "infinite-scroll": {
@@ -57,6 +59,17 @@ export default {
           },
           to: {
             transform: "translateX(calc(-100% - 4rem))",
+          },
+        },
+        shake: {
+          "0%, 100%": {
+            transform: "rotate(0)",
+          },
+          "10%, 30%, 70%": {
+            transform: "rotate(-5deg)",
+          },
+          "20%, 50%, 90%": {
+            transform: "rotate(5deg)",
           },
         },
       },

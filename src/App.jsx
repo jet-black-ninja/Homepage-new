@@ -5,11 +5,11 @@ import Homepage from "./pages/HomePage";
 import ProjectPage from "./pages/ProjectPage/ProjectPage";
 import AboutPage from "./pages/AboutPage";
 import ContactPage from "./pages/ContactPage";
-import ResumeActions from "./components/common/ResumeActions";
+// import ResumeActions from "./components/common/ResumeActions";
 import "locomotive-scroll/dist/locomotive-scroll.css";
 function App() {
   const [darkMode, setDarkMode] = useState(() => {
-    return localStorage.getItem("theme") === "dark";
+    return localStorage.getItem("theme") || "dark";
   });
 
   useEffect(() => {
@@ -40,7 +40,7 @@ function App() {
         <Route path="/about" element={<AboutPage />} />
         <Route path="/contact" element={<ContactPage />} />
       </Routes>
-      <ResumeActions />
+      {/* <ResumeActions /> */}
     </>
   );
 }

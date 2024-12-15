@@ -75,7 +75,9 @@ export default function Skills() {
               variants={headerVariants}
               className="space-y-2 text-center"
             >
-              <p className="text-4xl font-bold text-purple-300">Skills</p>
+              <p className="text-3xl md:text-4xl lg:text-5xl font-bold text-purple-700">
+                Skills
+              </p>
               <p className="text-sm font-bold text-[#bababb]">I have honed</p>
             </motion.div>
             <motion.h1

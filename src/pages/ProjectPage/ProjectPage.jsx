@@ -31,11 +31,11 @@ export default function ProjectPage() {
       </section>
       <section
         ref={sectionRef}
-        className=" top-0 w-full min-h-screen flex items-start justify-center bg-amber-100/70 dark:bg-[#0f111a] rounded-t-[80px] transition-colors "
+        className="top-0 w-full min-h-screen flex items-start justify-center bg-amber-100/70 dark:bg-[#0f111a] rounded-t-[80px] transition-colors "
       >
         <ContentWrapper className={styles.wrapper}>
-          <div className={styles.projects}>
-            <div className={`${styles.descriptions}`}>
+          <div className={`${styles.projects}`}>
+            <div className={styles.descriptions}>
               {projectData.map((project, index) => (
                 <Description
                   key={index}
@@ -74,8 +74,8 @@ export default function ProjectPage() {
         )}
       </section>
       <footer className="group">
-        <section className=" top-0">
-          <Links className="rounded-e-none" />
+        <section className="dark:bg-[#0f111a] bg-amber-100/70">
+          <Links />
         </section>
       </footer>
     </>
