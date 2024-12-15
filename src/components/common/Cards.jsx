@@ -5,6 +5,7 @@ import react from "../../assets/images/aboutme/react.png";
 import dumbbell from "../../assets/images/aboutme/dumbbell.png";
 import study from "../../assets/images/aboutme/study.jpg";
 import controller from "../../assets/images/aboutme/controller.png";
+import me from "../../assets/images/aboutme/me.jpg";
 import { twMerge } from "tailwind-merge";
 
 export default function Cards() {
@@ -15,25 +16,25 @@ export default function Cards() {
       <Card
         containerRef={containerRef}
         src={coffee}
-        alt="Example image"
+        alt="coffee"
         rotate="6deg"
         top="20%"
         left="25%"
-        className="w-36 md:min-w-56"
+        className="w-36 md:min-w-[300px]"
       />
       <Card
         containerRef={containerRef}
         src={react}
-        alt="Example image"
+        alt="webdev"
         rotate="12deg"
-        top="45%"
+        top="60%"
         left="60%"
         className="min-w-48 md:w-[300px]"
       />
       <Card
         containerRef={containerRef}
         src={dumbbell}
-        alt="Example image"
+        alt="workout"
         rotate="-6deg"
         top="20%"
         left="40%"
@@ -42,7 +43,7 @@ export default function Cards() {
       <Card
         containerRef={containerRef}
         src={controller}
-        alt="Example image"
+        alt="gaming"
         rotate="8deg"
         top="50%"
         left="40%"
@@ -50,17 +51,17 @@ export default function Cards() {
       />
       <Card
         containerRef={containerRef}
-        src="https://img.freepik.com/free-photo/programming-background-collage_23-2149901770.jpg?t=st=1732010010~exp=1732013610~hmac=3ef2636b2eaf24e10a7bc147f6c002db9b91ec4656abb7ab76cfe7c50685a49b&w=826"
-        alt="Example image"
+        src={me}
+        alt="me"
         rotate="18deg"
-        top="20%"
-        left="65%"
+        top="40%"
+        left="15%"
         className="w-40 md:w-64"
       />
       <Card
         containerRef={containerRef}
         src={study}
-        alt="Example image"
+        alt="study"
         rotate="-3deg"
         top="35%"
         left="55%"
