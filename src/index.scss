@@ -4,14 +4,7 @@
 
 @font-face {
   font-family: "Monoid";
-  src: url("src/assets/fonts/MonoidNerdFont-Regular.ttf") format("truetype");
-  font-weight: 300;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Monoid";
-  src: url("src/assets/fonts/MonoidNerdFont-Regular.ttf") format("truetype");
+  src: url("/fonts/MonoidNerdFont-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
 }
@@ -45,6 +38,9 @@
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
     --radius: 0.5rem;
+  }
+  body {
+    font-family: var(--font-sans);
   }
 
   .dark {

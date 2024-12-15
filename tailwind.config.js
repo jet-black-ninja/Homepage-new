@@ -1,4 +1,3 @@
-import { transform } from "framer-motion";
 import { fontFamily } from "tailwindcss/defaultTheme";
 const plugin = require("tailwindcss/plugin");
 /** @type {import('tailwindcss').Config} */
@@ -13,8 +12,8 @@ export default {
         sm: "calc(var(--radius) - 4px)",
       },
       fontFamily: {
-        monoid: ["Monoid", ...fontFamily.sans],
-        sans: ["Monoid", ...fontFamily.sans],
+        monoid: ["var(--font-sans)", ...fontFamily.sans],
+        sans: ["var(--font-sans)", ...fontFamily.sans],
       },
       animation: {
         "infinite-scroll": "infinite-scroll 25s linear infinite",
