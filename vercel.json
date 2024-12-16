@@ -44,8 +44,8 @@
   ],
   "rewrites": [
     {
-      "source": "/api/(.*)",
-      "destination": "/public/api/$1"
+      "source": "/(.*)",
+      "destination": "/"
     }
   ]
 }
