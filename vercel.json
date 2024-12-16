@@ -2,14 +2,14 @@
   "version": 2,
   "builds": [
     {
-      "src": "public/**",
+      "src": "dist/**",
       "use": "@vercel/static"
     }
   ],
-  "routes": [
+  "rewrites": [
     {
-      "src": "/(.*)",
-      "dest": "/public/$1"
+      "source": "/(.*)",
+      "destination": "/dist/index.html"
     }
   ],
   "headers": [
@@ -40,12 +40,6 @@
       "source": "/old-page",
       "destination": "/new-page",
       "permanent": true
-    }
-  ],
-  "rewrites": [
-    {
-      "source": "/(.*)",
-      "destination": "/"
     }
   ]
 }
