@@ -2,8 +2,7 @@
   "version": 2,
   "builds": [
     {
-      "src": "dist/**",
-      "use": "@vercel/static"
+      "src": "dist/**"
     }
   ],
   "rewrites": [
@@ -33,13 +32,6 @@
           "value": "strict-origin-when-cross-origin"
         }
       ]
-    }
-  ],
-  "redirects": [
-    {
-      "source": "/old-page",
-      "destination": "/new-page",
-      "permanent": true
     }
   ]
 }
