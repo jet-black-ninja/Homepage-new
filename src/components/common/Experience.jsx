@@ -1,23 +1,23 @@
-import starIcon from "../../assets/images/star.svg";
+// import starIcon from "../../assets/images/star.svg";
 import reactIcon from "../../assets/images/react.svg";
 import { motion } from "framer-motion";
 const experiences = [
-  {
-    title: "Full Stack Developer",
-    company: "SPYSR",
-    description:
-      "Working as a full stack developer at SPYSR since May 2023. Developed Booking Engines and Travel Portals using MERN stack and PostgreSQL. Designed and developed over 5 websites as a team of 4.",
-    icon: starIcon,
-    technologies: ["MongoDB", "Express", "React", "NodeJS", "PostgreSQL"],
-    duration: "May 2023 - July 2024",
-  },
+  // {
+  //   title: "Full Stack Developer",
+  //   company: "SPYSR",
+  //   description:
+  //     "Working as a full stack developer at SPYSR since May 2023. Developed Booking Engines and Travel Portals using MERN stack and PostgreSQL. Designed and developed over 5 websites as a team of 4.",
+  //   icon: starIcon,
+  //   technologies: ["MongoDB", "Express", "React", "NodeJS", "PostgreSQL"],
+  //   duration: "May 2023 - July 2024",
+  // },
   {
     title: "React Developer Intern",
     company: "Verzeo",
     description:
-      "Worked as a React.js developer intern at Verzeo for 3 months from January 2023 to March 2023. Contributed to the development of a website built with React.js.",
+      "Worked as a React.js developer intern at Verzeo. I implemented reusable components, optimized UI performance, and integrated APIs for dynamic data. I also debugged cross-browser issues, improved CSS with Tailwind for better responsiveness",
     icon: reactIcon,
-    technologies: ["React.js", "HTML", "CSS", "JavaScript"],
+    technologies: ["React.js", "Git", "HTML", "CSS", "JavaScript"],
     duration: "December 2023 - March 2024",
   },
 ];

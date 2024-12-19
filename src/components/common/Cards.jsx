@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useRef } from "react";
 import { motion } from "framer-motion";
 import coffee from "../../assets/images/aboutme/coffee.svg";
 import react from "../../assets/images/aboutme/react.png";
