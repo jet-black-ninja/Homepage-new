@@ -24,7 +24,7 @@ const navLinks = [
 ];
 Navbar.propTypes = {
   activeSection: PropTypes.string,
-  darkMode: PropTypes.bool,
+  darkMode: PropTypes.string.isRequired,
   setDarkMode: PropTypes.func.isRequired,
 };
 export default function Navbar({ activeSection, darkMode, setDarkMode }) {

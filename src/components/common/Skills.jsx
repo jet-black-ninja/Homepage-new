@@ -12,7 +12,7 @@ const iconSlugs = [
   "github",
   "mongodb",
   "mysql",
-  "node-dot-js",
+  "nodedotjs",
   "npm",
   "postgresql",
   "postman",
@@ -30,9 +30,9 @@ const iconSlugs = [
   "jest",
   "neovim",
   "raspberrypi",
-  "next-dot-js",
+  "nextdotjs",
   "yarn",
-  "socket-dot-io",
+  "socketdotio",
 ];
 export default function Skills() {
   const sectionRef = useRef(null);
