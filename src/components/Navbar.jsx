@@ -31,7 +31,7 @@ export default function Navbar({ activeSection, darkMode, setDarkMode }) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const PDF_URL =
-    "https://drive.google.com/file/d/1V6aT-29LxmUw0l0J6_AzIRWyc7VYaxSQ/view?usp=drive_link";
+    "https://drive.google.com/file/d/1BswHK3mCa0lpJE7L9DU5y4gaD4hn7OuI/view?usp=sharing";
 
   const playClickSound = () => {
     const audio = new Audio("/src/assets/sfx/click2.mp3");
@@ -82,11 +82,11 @@ export default function Navbar({ activeSection, darkMode, setDarkMode }) {
                       variant="ghost"
                       className={`text-sm transition-all duration-300 font-medium rounded-3xl ${
                         activeSection === "aboutMe"
-                          ? "text-violet-700"
+                          ? "text-blue-700"
                           : activeSection === "projects"
-                          ? "text-blue-500"
+                          ? "text-violet-800 dark:text-violet-400"
                           : activeSection === "skills"
-                          ? "text-amber-400"
+                          ? "text-amber-700"
                           : "text-purple-600"
                       }`}
                       onClick={playClickSound}
@@ -136,11 +136,11 @@ export default function Navbar({ activeSection, darkMode, setDarkMode }) {
                   size="icon"
                   className={`md:hidden ${
                     activeSection === "aboutMe"
-                      ? "bg-violet-500"
-                      : activeSection === "projects"
                       ? "bg-blue-500"
+                      : activeSection === "projects"
+                      ? "bg-violet-500"
                       : activeSection === "skills"
-                      ? "bg-emerald-600"
+                      ? "bg-amber-600"
                       : "bg-purple-500"
                   }`}
                 >

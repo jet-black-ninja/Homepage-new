@@ -85,10 +85,10 @@ export default function AboutPage() {
                 <span className="font-semibold text-cyan-600">
                   Full Stack Developer
                 </span>{" "}
-                at SPYSR since May 2023, I&apos;ve built booking engines, travel
-                portals, and dashboards using the MERN stack, PostgreSQL, and
-                MySQL. I&apos;ve also independently designed and developed over
-                six websites, turning ideas into impactful solutions.
+                I&apos;ve built landing pages and Information dashboards
+                using the MERN stack, PostgreSQL, and MySQL. I&apos;ve also
+                independently designed and developed over six websites, turning
+                ideas into impactful solutions.
               </p>
             </div>
           </ScrollElement>

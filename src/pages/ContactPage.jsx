@@ -59,7 +59,7 @@ export default function ContactPage() {
                 Email Me
               </Link>
               <Link
-                to="https://api.whatsapp.com/send?phone=8586007958&text=Hello%20there!"
+                to="https://api.whatsapp.com/send?phone=918586007958&text=Hello%20there!"
                 className={twMerge(
                   "bg-[#25d366] flex gap-2 justify-center items-center text-white px-6 py-3 rounded-full hover:bg-[#34c95b] font-semibold transition-colors",
                   "lenis-link"

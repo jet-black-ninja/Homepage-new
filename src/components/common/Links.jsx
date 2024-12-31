@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 export default function Links({ ...className }) {
   return (
     <section
-      className={`grid place-content-center gap-2 bg-indigo-300 dark:bg-indigo-950 py-24 px-8 text-black rounded-t-[80px] ${className}`}
+      className={`grid place-content-center gap-2 bg-emerald-300 dark:bg-emerald-700 py-24 px-8 text-black rounded-t-[80px] transition-colors ${className}`}
     >
       <FlipLink href="https://www.linkedin.com/in/sachin-kumar-singh-133717c/">
         LinkedIn
@@ -19,7 +19,7 @@ const FlipLink = ({ children, href }) => {
       initial="initial"
       whileHover="hovered"
       href={href}
-      className="relative block overflow-hidden whitespace-nowrap text-4xl font-black uppercase sm:text-7xl md:text-8xl lg:text-9xl"
+      className="relative block overflow-hidden whitespace-nowrap text-4xl  font-black uppercase sm:text-7xl md:text-8xl lg:text-9xl"
     >
       <div>
         {children.split("").map((letter, index) => (
