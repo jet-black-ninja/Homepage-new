@@ -62,13 +62,15 @@ export default function AboutPage() {
             className="flex flex-col items-start"
           >
             <div className="p-8 text-3xl font-bold leading-tight text-gray-900 md:text-4xl lg:text-5xl dark:text-white">
-              I&apos;m Sachin,{" "}
-              <FlipWords
-                words={words}
-                className="px-4 py-2 text-white shadow-lg bg-gradient-to-r from-rose-600 to-rose-400 rounded-xl"
-              />{" "}
+              I&apos;m Sachin,
+              <br />
               <p className="block mt-4 leading-snug">
-                A software engineer Living in Noida,
+                A{" "}
+                <FlipWords
+                  words={words}
+                  className="px-4 py-2 text-white shadow-lg bg-gradient-to-r from-rose-600 to-rose-400 rounded-xl"
+                />{" "}
+                software engineer Living in Noida,
                 <br />
                 making Interactive ,Intuitive and enjoyable web apps which get
                 the job done.
@@ -85,8 +87,8 @@ export default function AboutPage() {
                 <span className="font-semibold text-cyan-600">
                   Full Stack Developer
                 </span>{" "}
-                I&apos;ve built landing pages and Information dashboards
-                using the MERN stack, PostgreSQL, and MySQL. I&apos;ve also
+                I&apos;ve built landing pages and Information dashboards using
+                the MERN stack, PostgreSQL, and MySQL. I&apos;ve also
                 independently designed and developed over six websites, turning
                 ideas into impactful solutions.
               </p>

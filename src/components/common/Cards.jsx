@@ -29,7 +29,7 @@ export default function Cards() {
         rotate="12deg"
         top="60%"
         left="60%"
-        className="min-w-48 md:w-[300px]"
+        className="w-36 md:w-[300px]"
       />
       <Card
         containerRef={containerRef}
@@ -38,7 +38,7 @@ export default function Cards() {
         rotate="-6deg"
         top="20%"
         left="40%"
-        className="w-32 md:w-60"
+        className="w-36 md:w-60"
       />
       <Card
         containerRef={containerRef}
@@ -56,7 +56,7 @@ export default function Cards() {
         rotate="18deg"
         top="40%"
         left="15%"
-        className="w-40 md:w-64"
+        className="w-36 md:w-64"
       />
       <Card
         containerRef={containerRef}
@@ -65,7 +65,7 @@ export default function Cards() {
         rotate="-3deg"
         top="35%"
         left="55%"
-        className="w-40 md:w-64"
+        className="w-36 md:w-64"
       />
     </div>
   );
