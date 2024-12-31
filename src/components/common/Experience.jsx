@@ -13,12 +13,12 @@ const experiences = [
   },
   {
     title: "React Developer Intern",
-    company: "Verzeo",
+    company: "Verzeo EduTech",
     description:
       "Worked as a React.js developer intern at Verzeo. I implemented reusable components, optimized UI performance, and integrated APIs for dynamic data. I also debugged cross-browser issues, improved CSS with Tailwind for better responsiveness",
     icon: reactIcon,
     technologies: ["React.js", "Git", "HTML", "CSS", "JavaScript"],
-    duration: "December 2023 - March 2024",
+    duration: "January 2023 - April 2023",
   },
 ];
 export default function Experience() {
