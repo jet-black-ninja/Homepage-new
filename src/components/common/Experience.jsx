@@ -1,16 +1,16 @@
-// import starIcon from "../../assets/images/star.svg";
+import starIcon from "../../assets/images/star.svg";
 import reactIcon from "../../assets/images/react.svg";
 import { motion } from "framer-motion";
 const experiences = [
-  // {
-  //   title: "Full Stack Developer",
-  //   company: "SPYSR",
-  //   description:
-  //     "Working as a full stack developer at SPYSR since May 2023. Developed Booking Engines and Travel Portals using MERN stack and PostgreSQL. Designed and developed over 5 websites as a team of 4.",
-  //   icon: starIcon,
-  //   technologies: ["MongoDB", "Express", "React", "NodeJS", "PostgreSQL"],
-  //   duration: "May 2023 - July 2024",
-  // },
+  {
+    title: "Full Stack Developer",
+    company: "SPYSR",
+    description:
+      "Working as a full stack developer at SPYSR since May 2023. Developed Booking Engines and Travel Portals using MERN stack and PostgreSQL. Designed and developed over 5 websites as a team of 4.",
+    icon: starIcon,
+    technologies: ["MongoDB", "Express", "React", "NodeJS", "PostgreSQL"],
+    duration: "May 2023 - July 2024",
+  },
   {
     title: "React Developer Intern",
     company: "Verzeo",
