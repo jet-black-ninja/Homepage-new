@@ -4,7 +4,7 @@ export default function Links({ ...className }) {
     <section
       className={`grid place-content-center gap-2 bg-emerald-300 dark:bg-emerald-700 py-24 px-8 text-black rounded-t-[80px] transition-colors ${className}`}
     >
-      <FlipLink href="https://www.linkedin.com/in/sachin-kumar-singh-133717c/">
+      <FlipLink href="https://www.linkedin.com/in/sachsin17/">
         LinkedIn
       </FlipLink>
       <FlipLink href="https://x.com/jetblack_ninja">Twitter</FlipLink>
