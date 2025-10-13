@@ -7,11 +7,11 @@ const iconSlugs = [
   "javascript",
   "react",
   "express",
-  "figma",
+  // "figma",
   "framer",
   "github",
   "mongodb",
-  "mysql",
+  // "mysql",
   "nodedotjs",
   "npm",
   "postgresql",
@@ -22,17 +22,21 @@ const iconSlugs = [
   "graphql",
   "docker",
   "amazonwebservices",
-  "linux",
+  // "linux",
   "sass",
   "reactrouter",
   "shadcnui",
-  "python",
+  // "python",
   "jest",
   "neovim",
   "raspberrypi",
-  "nextdotjs",
+  // "nextdotjs",
   "yarn",
   "socketdotio",
+    "pnpm",
+    "redis",
+    "archlinux",
+
 ];
 export default function Skills() {
   const sectionRef = useRef(null);
@@ -82,10 +86,9 @@ export default function Skills() {
             </motion.div>
             <motion.h1
               variants={headerVariants}
-              className="text-2xl md:text-3xl lg:text-4xl font-medium leading-tight tracking-tight lg:leading-[1.2]  text-black dark:text-purple-200 text-center lg:w-[600px]"
+              className="text-xl md:text-3xl lg:text-4xl font-medium leading-tight tracking-tight lg:leading-[1.2]  text-black dark:text-purple-200 text-center lg:w-[600px]"
             >
-              Turning ideas into functional, user-friendly web experiences with
-              a blend of logic, creativity, and innovation
+                Engineering scalable web solutions with passion and precision
             </motion.h1>
           </div>
         </div>
