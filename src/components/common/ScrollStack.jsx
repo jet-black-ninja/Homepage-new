@@ -37,8 +37,7 @@ export default function ScrollStack({ onSectionChange }) {
         <article>
           <section
             className={twMerge(
-              "h-screen sticky top-0 ",
-              "lenis-section"
+              "min-h-screen sticky top-0 "
             )}
             id="aboutMe"
           >
@@ -47,8 +46,7 @@ export default function ScrollStack({ onSectionChange }) {
           <section
             id="skills"
             className={twMerge(
-              "h-screen sticky  top-0",
-              "lenis-section"
+              "min-h-screen sticky  top-0"
             )}
           >
             <Skills />
@@ -56,8 +54,7 @@ export default function ScrollStack({ onSectionChange }) {
           <section
             id="projects"
             className={twMerge(
-              "sticky top-0 ",
-              "lenis-section"
+              "min-h-screen w-full sticky -top-60 md:top-0 mb-10"
             )}
           >
             <Projects />
@@ -66,15 +63,14 @@ export default function ScrollStack({ onSectionChange }) {
           <section
             id="experience"
             className={twMerge(
-              " w-full -top-32 sticky md:top-0 mb-10",
-              "lenis-section"
+              "min-h-screen w-full  sticky top-0 md:top-0 mb-50"
             )}
           >
             <Experience />
           </section>
           <section
             id="links"
-            className={twMerge("sticky top-10 md:top-0 ", "lenis-section")}
+            className={twMerge("sticky top-10 md:top-0 ")}
           >
             <Links />
           </section>
