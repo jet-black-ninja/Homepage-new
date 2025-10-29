@@ -24,7 +24,7 @@ const navLinks = [
 ];
 Navbar.propTypes = {
   activeSection: PropTypes.string,
-  darkMode: PropTypes.string.isRequired,
+  darkMode: PropTypes.bool.isRequired,
   setDarkMode: PropTypes.func.isRequired,
 };
 export default function Navbar({ activeSection, darkMode, setDarkMode }) {
@@ -110,7 +110,7 @@ export default function Navbar({ activeSection, darkMode, setDarkMode }) {
               Resume
             </Button>
             <Button
-              onClick={() => setDarkMode(!darkMode)}
+              onClick={() => setDarkMode(darkMode !== true)}
               className="p-2 rounded-sm hover:scale-110  transition-all active:scale-90"
               size="icon"
             >

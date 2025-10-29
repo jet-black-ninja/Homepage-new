@@ -6,38 +6,45 @@ import Experience from "./Experience";
 import Links from "./Links";
 import PropTypes from "prop-types";
 import { twMerge } from "tailwind-merge";
-import {useEffect} from "react";
+import {useEffect, useRef} from "react";
 
 ScrollStack.propTypes = {
   onSectionChange: PropTypes.func.isRequired,
 };
 export default function ScrollStack({ onSectionChange }) {
+    const currentSectionRef = useRef(null);
     useEffect(() => {
-        const handleScroll = () => {
-            const sections = document.querySelectorAll('section');
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop;
-                const sectionHeight = section.offsetHeight;
+        const sections = Array.from(document.querySelectorAll("section"));
+        if (!sections.length) return;
 
-                if (window.scrollY >= sectionTop - 30 && window.scrollY < sectionTop + sectionHeight) {
-                    const sectionId = section.getAttribute('id');
-                    console.log('Current Section:', sectionId); // Log active section
-                    onSectionChange(sectionId);
-                }
-            });
-        };
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        const id = entry.target.getAttribute("id");
+                        if (id && currentSectionRef.current !== id) {
+                            currentSectionRef.current = id;
+                            onSectionChange(id);
+                        }
+                    }
+                });
+            },
+            { root: null, rootMargin: "0px", threshold: 0.6 } // adjust threshold as needed
+        );
 
-        window.addEventListener('scroll', handleScroll);
-
-        return () => window.removeEventListener('scroll', handleScroll);
+        sections.forEach((s) => observer.observe(s));
+        return () => observer.disconnect();
     }, [onSectionChange]);
   return (
-    <ReactLenis root options={{ smooth: true,
+    <ReactLenis root options={{
+        smooth: true,
         smoothWheel: true,
         smoothTouch: true, // enable touch smoothing on mobile
-        wheelMultiplier: 0.2, }}>
+        wheelMultiplier: 0.5,
+        touchMultiplier: 0.2,}}
+    >
       <main>
-        <article>
+        <article >
           <section
             className={twMerge(
               "min-h-screen sticky top-0 "
@@ -57,7 +64,7 @@ export default function ScrollStack({ onSectionChange }) {
           <section
             id="projects"
             className={twMerge(
-              "min-h-screen w-full sticky -top-1/2 md:top-0 mb-10"
+              "min-h-screen w-full sticky -top-1/3 lg:top-0 mb-10"
             )}
           >
             <Projects />
@@ -66,14 +73,14 @@ export default function ScrollStack({ onSectionChange }) {
           <section
             id="experience"
             className={twMerge(
-              "min-h-screen w-full  sticky -top-3/4 md:top-0 mb-50"
+              "h-full sticky top-[800%] lg:top-0"
             )}
           >
             <Experience />
           </section>
           <section
             id="links"
-            className={twMerge(" sticky md:top-0 mt10")}
+            className={twMerge("relative md:top-0")}
           >
             <Links />
           </section>
