@@ -19,7 +19,7 @@ export default function ScrollStack({ onSectionChange }) {
                 const sectionTop = section.offsetTop;
                 const sectionHeight = section.offsetHeight;
 
-                if (window.scrollY >= sectionTop - 50 && window.scrollY < sectionTop + sectionHeight) {
+                if (window.scrollY >= sectionTop - 30 && window.scrollY < sectionTop + sectionHeight) {
                     const sectionId = section.getAttribute('id');
                     console.log('Current Section:', sectionId); // Log active section
                     onSectionChange(sectionId);
@@ -32,7 +32,10 @@ export default function ScrollStack({ onSectionChange }) {
         return () => window.removeEventListener('scroll', handleScroll);
     }, [onSectionChange]);
   return (
-    <ReactLenis root options={{ smoothWheel: true }}>
+    <ReactLenis root options={{ smooth: true,
+        smoothWheel: true,
+        smoothTouch: true, // enable touch smoothing on mobile
+        wheelMultiplier: 0.2, }}>
       <main>
         <article>
           <section
@@ -54,7 +57,7 @@ export default function ScrollStack({ onSectionChange }) {
           <section
             id="projects"
             className={twMerge(
-              "min-h-screen w-full sticky -top-60 md:top-0 mb-10"
+              "min-h-screen w-full sticky -top-1/2 md:top-0 mb-10"
             )}
           >
             <Projects />
@@ -63,14 +66,14 @@ export default function ScrollStack({ onSectionChange }) {
           <section
             id="experience"
             className={twMerge(
-              "min-h-screen w-full  sticky top-0 md:top-0 mb-50"
+              "min-h-screen w-full  sticky -top-3/4 md:top-0 mb-50"
             )}
           >
             <Experience />
           </section>
           <section
             id="links"
-            className={twMerge("sticky top-10 md:top-0 ")}
+            className={twMerge(" sticky md:top-0 mt10")}
           >
             <Links />
           </section>
