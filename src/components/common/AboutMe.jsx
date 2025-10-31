@@ -27,7 +27,7 @@ export default function AboutMe() {
             className="text-xl md:text-3xl lg:text-4xl font-medium leading-right tracking-tight lg:leading-[1.2] max-w-3xl"
           >
             An innovative full-stack developer and lifelong learner, crafting
-            engaging web experiences with TypeScript, React, and a touch of
+            engaging web experiences with a touch of
             creativity.
           </motion.h1>
           <motion.div

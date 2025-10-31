@@ -56,7 +56,7 @@ export default function ScrollStack({ onSectionChange }) {
           <section
             id="skills"
             className={twMerge(
-              "min-h-screen sticky  top-0"
+              "min-h-screen sticky top-0"
             )}
           >
             <Skills />
@@ -64,7 +64,7 @@ export default function ScrollStack({ onSectionChange }) {
           <section
             id="projects"
             className={twMerge(
-              "min-h-screen w-full sticky -top-1/3 lg:top-0 mb-10"
+              "h-full w-full sticky -top-1/2 pb-[200px]"
             )}
           >
             <Projects />
@@ -73,7 +73,7 @@ export default function ScrollStack({ onSectionChange }) {
           <section
             id="experience"
             className={twMerge(
-              "h-full sticky top-[800%] lg:top-0"
+              "h-full sticky top-0 py-[200px]"
             )}
           >
             <Experience />
