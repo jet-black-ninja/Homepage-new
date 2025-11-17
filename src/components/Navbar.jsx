@@ -120,7 +120,7 @@ export default function Navbar({ activeSection, darkMode, setDarkMode }) {
                 <MoonIcon className="hover:animate-shimmer" />
               )}
             </Button>
-            <Link to="https://github.com/jet-black-ninja">
+            <Link to="https://github.com/sachinkmrsin">
               <Button
                 variant="ghost"
                 size="icon"
