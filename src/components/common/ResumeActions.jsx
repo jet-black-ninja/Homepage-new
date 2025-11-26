@@ -26,7 +26,7 @@ const ResumeActionsToggle = () => {
     } catch (error) {
       console.error("Error in download handler:", error);
       alert(
-        "Sorry, there was an error downloading the resume. Please try again later."
+        "Sorry, there was an error downloading the resume. Please try again later.",
       );
     }
   };

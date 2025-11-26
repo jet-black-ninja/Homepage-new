@@ -43,7 +43,7 @@ export default function Navbar({ activeSection, darkMode, setDarkMode }) {
     } catch (error) {
       console.error("Error in download handler:", error);
       alert(
-        "Sorry, there was an error downloading the resume. Please try again later."
+        "Sorry, there was an error downloading the resume. Please try again later.",
       );
     }
   };
@@ -84,10 +84,10 @@ export default function Navbar({ activeSection, darkMode, setDarkMode }) {
                         activeSection === "aboutMe"
                           ? "text-blue-700"
                           : activeSection === "projects"
-                          ? "text-violet-800 dark:text-violet-400"
-                          : activeSection === "skills"
-                          ? "text-amber-700"
-                          : "text-purple-600"
+                            ? "text-violet-800 dark:text-violet-400"
+                            : activeSection === "skills"
+                              ? "text-amber-700"
+                              : "text-purple-600"
                       }`}
                       onClick={playClickSound}
                     >
@@ -138,10 +138,10 @@ export default function Navbar({ activeSection, darkMode, setDarkMode }) {
                     activeSection === "aboutMe"
                       ? "bg-blue-500"
                       : activeSection === "projects"
-                      ? "bg-violet-500"
-                      : activeSection === "skills"
-                      ? "bg-amber-600"
-                      : "bg-purple-500"
+                        ? "bg-violet-500"
+                        : activeSection === "skills"
+                          ? "bg-amber-600"
+                          : "bg-purple-500"
                   }`}
                 >
                   <MdMenuOpen className="w-5 h-5" />

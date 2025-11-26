@@ -22,7 +22,7 @@ export default function FamilyButton({ children }) {
         "bg-gradient-to-b from-neutral-900 to black",
         isExpanded
           ? "w-[204px] bg-gradient-to-b dark:from-stone-900 dark: to-neutral-900/80"
-          : "dark:from-neutral-900 dark: to-stone-950 bg-gradient-to-b"
+          : "dark:from-neutral-900 dark: to-stone-950 bg-gradient-to-b",
       )}
     >
       <div className="rounded-[23px] border border-black/10 ">
@@ -109,14 +109,14 @@ const FamilyButtonContainer = ({ isExpanded, toggleExpand, children }) => {
           >
             <XIcon
               className={cn(
-                "h-7 w-7 text-cyan-100/30 dark:text-neutral-400/80 group-hover:text-neutral-500 transition-colors duration-200 "
+                "h-7 w-7 text-cyan-100/30 dark:text-neutral-400/80 group-hover:text-neutral-500 transition-colors duration-200 ",
               )}
             />
           </motion.div>
         ) : (
           <motion.div
             className={cn(
-              "p-[11px] group bg-neutral-200 dark:bg-violet-500/90 text-cyan-50 border border-cyan-100/10  shadow-2xl transition-colors duration-200"
+              "p-[11px] group bg-neutral-200 dark:bg-violet-500/90 text-cyan-50 border border-cyan-100/10  shadow-2xl transition-colors duration-200",
             )}
             style={{ borderRadius: 60 }}
             onClick={toggleExpand}

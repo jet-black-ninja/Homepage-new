@@ -1,38 +1,60 @@
 import jsIcon from "../../assets/images/javascript.svg";
 import reactIcon from "../../assets/images/react2.svg";
-import nodeIcon from "../../assets/images/node.svg"
+import nodeIcon from "../../assets/images/node.svg";
 import { motion } from "framer-motion";
 const experiences = [
-    {
-        title: "Full Stack Developer",
-        company: "IqSetters LLP",
-        location: "Noida, India",
-        description:
-            "Led backend development for 5+ apps, did end to end development, managed AWS/Azure, automated CI/CD, improved workflows, integrated APIs, and delivered key projects on time.",
-        icon: nodeIcon,
-        technologies: ["Node.js", "TypeScript", "MongoDB", "PostgreSQL","Redis", "AWS", "GitHub Actions"],
-        duration: "Oct 2024 – Sept 2025",
-    },
-    {
-        title: "Frontend Developer",
-        company: "SPYSR",
-        location: "Noida, India",
-        description:
-            "Developed React apps with TypeScript, Redux, and Tailwind CSS. Built dashboards, improved state management, and enhanced UI/UX for client satisfaction.",
-        icon: reactIcon,
-        technologies: ["React", "TypeScript", "Redux Toolkit", "Tailwind CSS", "Chart.js", "D3.js", "ShadCN/UI"],
-        duration: "May 2023 – Jul 2024",
-    },
-    {
-        title: "Front End Developer, Intern",
-        company: "Verzeo EduTech",
-        location: "Online",
-        description:
-            "Enhanced React components, built authentication forms, optimized load time, and refactored legacy code to hooks.",
-        icon: jsIcon,
-        technologies: ["React", "TypeScript", "Tailwind CSS", "Hooks", "API Integration"],
-        duration: "Nov 2022 – Apr 2023",
-    },
+  {
+    title: "Full Stack Developer",
+    company: "IqSetters LLP",
+    location: "Noida, India",
+    description:
+      "Led backend development for 5+ apps, did end to end development, managed AWS/Azure, automated CI/CD, improved workflows, integrated APIs, and delivered key projects on time.",
+    icon: nodeIcon,
+    technologies: [
+      "Node.js",
+      "TypeScript",
+      "MongoDB",
+      "PostgreSQL",
+      "Redis",
+      "AWS",
+      "GitHub Actions",
+    ],
+    duration: "Oct 2024 – Sept 2025",
+  },
+  {
+    title: "Frontend Developer",
+    company: "SPYSR",
+    location: "Noida, India",
+    description:
+      "Developed React apps with TypeScript, Redux, and Tailwind CSS. Built dashboards, improved state management, and enhanced UI/UX for client satisfaction.",
+    icon: reactIcon,
+    technologies: [
+      "React",
+      "TypeScript",
+      "Redux Toolkit",
+      "Tailwind CSS",
+      "Chart.js",
+      "D3.js",
+      "ShadCN/UI",
+    ],
+    duration: "May 2023 – Jul 2024",
+  },
+  {
+    title: "Front End Developer, Intern",
+    company: "Verzeo EduTech",
+    location: "Online",
+    description:
+      "Enhanced React components, built authentication forms, optimized load time, and refactored legacy code to hooks.",
+    icon: jsIcon,
+    technologies: [
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "Hooks",
+      "API Integration",
+    ],
+    duration: "Nov 2022 – Apr 2023",
+  },
 ];
 export default function Experience() {
   return (
@@ -61,7 +83,11 @@ export default function Experience() {
                 <div className="lg:col-span-4">
                   <div className="flex items-center gap-4">
                     <div className="flex h-12 w-12 items-center justify-center rounded-full bg-transparent group-hover:bg-gray-100 dark:group-hover:bg-neutral-700 transition-colors">
-                      <img src={experience.icon} alt={experience.title + " icon"} className="dark:invert dark:brightness-0 dark:contrast-200" />
+                      <img
+                        src={experience.icon}
+                        alt={experience.title + " icon"}
+                        className="dark:invert dark:brightness-0 dark:contrast-200"
+                      />
                     </div>
                     <div>
                       <h3 className="text-2xl font- ">{experience.title}</h3>

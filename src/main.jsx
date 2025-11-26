@@ -15,5 +15,5 @@ createRoot(document.getElementById("root")).render(
         </BrowserRouter>
       </ViewPortContextProvider>
     </HelmetProvider>
-  </StrictMode>
+  </StrictMode>,
 );

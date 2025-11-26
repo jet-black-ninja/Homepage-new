@@ -23,7 +23,7 @@ export default function ContactPage() {
         <section
           className={twMerge(
             "sticky top-0 grid min-h-screen w-full place-content-center overflow-hidden bg-[#f5f5f5] dark:bg-stone-700 transition-colors",
-            "lenis-section"
+            "lenis-section",
           )}
         >
           <h2 className="relative  z-0 text-[14vw] font-black text-[#333] dark:text-zinc-300 md:text-[200px] transition-colors">
@@ -33,7 +33,7 @@ export default function ContactPage() {
         <section
           className={twMerge(
             "sticky top-0 min-h-screen w-full place-content-center overflow-hidden bg-[#d7d2e8] dark:bg-[#000000] rounded-t-3xl",
-            "lenis-section"
+            "lenis-section",
           )}
         >
           <div>
@@ -52,7 +52,7 @@ export default function ContactPage() {
                 to="mailto:sachinkmrsin@gmail.com"
                 className={twMerge(
                   "bg-[#333] flex gap-2 text-white px-6 py-3 rounded-full hover:bg-[#4d4d4d] font-semibold transition-colors",
-                  "lenis-link"
+                  "lenis-link",
                 )}
               >
                 <Mail />
@@ -62,7 +62,7 @@ export default function ContactPage() {
                 to="https://api.whatsapp.com/send?phone=918586007958&text=Hello%20there!"
                 className={twMerge(
                   "bg-[#25d366] flex gap-2 justify-center items-center text-white px-6 py-3 rounded-full hover:bg-[#34c95b] font-semibold transition-colors",
-                  "lenis-link"
+                  "lenis-link",
                 )}
               >
                 <FaWhatsapp className="w-6 h-6" />
@@ -74,7 +74,7 @@ export default function ContactPage() {
         <section
           className={twMerge(
             "sticky top-10 place-content-center overflow-hidden",
-            "lenis-section"
+            "lenis-section",
           )}
         >
           <Links />

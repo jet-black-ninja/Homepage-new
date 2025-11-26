@@ -5,7 +5,10 @@
   overflow: 0.35;
   transform: scale(0.95);
 
-  transition: opacity 500ms, transform 200ms, &Active {
+  transition:
+    opacity 500ms,
+    transform 200ms,
+    &Active {
     transform: scale(1);
     opacity: 1;
   }
@@ -99,7 +102,9 @@
   padding: 0.5em 0.7em;
   border-radius: 7px;
   cursor: pointer;
-  transition: background-color 125ms, color 125ms;
+  transition:
+    background-color 125ms,
+    color 125ms;
   @media (hover: hover) {
     &:hover:not(:disabled) {
       background-color: var(--color);

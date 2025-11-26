@@ -79,7 +79,7 @@ const Card = ({ src, alt, rotate, top, left, containerRef, className }) => {
     let maxZIndex = -Infinity;
     els.forEach((el) => {
       let zIndex = parseInt(
-        window.getComputedStyle(el).getPropertyValue("z-index")
+        window.getComputedStyle(el).getPropertyValue("z-index"),
       );
       if (!isNaN(zIndex) && zIndex > maxZIndex) {
         maxZIndex = zIndex;
@@ -98,7 +98,7 @@ const Card = ({ src, alt, rotate, top, left, containerRef, className }) => {
       dragElastic={0.65}
       className={twMerge(
         "drag-elements absolute rounded-xl bg-zinc-200 dark:bg-slate-700 self-center p-1 ",
-        className
+        className,
       )}
     />
   );

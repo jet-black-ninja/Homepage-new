@@ -16,7 +16,9 @@
     display: flex;
     justify-content: center;
     opacity: 0.5;
-    transition: width 200ms, opacity 200ms;
+    transition:
+      width 200ms,
+      opacity 200ms;
 
     &--active {
       opacity: 1;

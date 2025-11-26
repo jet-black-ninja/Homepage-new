@@ -24,7 +24,7 @@ export default function useScrollState() {
       positions.push(
         project.getBoundingClientRect().top +
           document.documentElement.scrollTop +
-          project.clientHeight
+          project.clientHeight,
       );
     }
     setProjectPositions(positions);
@@ -66,7 +66,7 @@ export default function useScrollState() {
 
           setActiveProjectProgress(
             (centerPos - projectPositions[index - 1]) /
-              (projectPositions[index] - projectPositions[index - 1])
+              (projectPositions[index] - projectPositions[index - 1]),
           );
         }
       }

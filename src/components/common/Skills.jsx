@@ -33,10 +33,9 @@ const iconSlugs = [
   // "nextdotjs",
   "yarn",
   "socketdotio",
-    "pnpm",
-    "redis",
-    "archlinux",
-
+  "pnpm",
+  "redis",
+  "archlinux",
 ];
 export default function Skills() {
   const sectionRef = useRef(null);
@@ -88,7 +87,7 @@ export default function Skills() {
               variants={headerVariants}
               className="text-xl md:text-3xl lg:text-4xl font-medium leading-tight tracking-tight lg:leading-[1.2]  text-black dark:text-purple-200 text-center lg:w-[600px]"
             >
-                Engineering scalable web solutions with passion and precision
+              Engineering scalable web solutions with passion and precision
             </motion.h1>
           </div>
         </div>
