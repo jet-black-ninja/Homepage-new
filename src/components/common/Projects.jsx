@@ -3,33 +3,36 @@ import { ArrowRight, MoveRight } from "lucide-react";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import butterfingers from "../../assets/images/projects/butterfingers.png";
-
+import spolyn from '../../assets/images/projects/spolyn.png'
+import pickup from '../../assets/images/projects/pickup.png'
+import higiniXcare from '../../assets/images/projects/higinixcare.png'
+import manipalHospitals from '../../assets/images/projects/manipal.png'
 const data = [
     {
         id: 1,
         alt: "Spolyn",
-        src: butterfingers,
+        src: spolyn,
         description: "Sports facility management platform with integrated online consulting services for athletes and coaches.",
         link: "https://play.google.com/store/apps/details?id=com.spolyn&hl=en",
     },
     {
         id: 2,
         alt: "PickUp",
-        src: butterfingers,
+        src: pickup,
         description: "On-demand goods delivery application serving the Delhi-NCR region with real-time tracking.",
         link: "https://play.google.com/store/apps/details?id=com.durgatransport&hl=en",
     },
     {
         id: 3,
         alt: "HiGiniXCare",
-        src: butterfingers,
+        src: higiniXcare,
         description: "Full-stack e-commerce platform with custom CMS for pest control and hygiene services.",
         link: "https://higinixcare.in/",
     },
     {
         id: 4,
         alt: "Manipal Hospitals",
-        src: butterfingers,
+        src: manipalHospitals,
         description: "Healthcare content management system for a multi-location hospital chain across India.",
         link: "https://medi4tour.com/",
     },
