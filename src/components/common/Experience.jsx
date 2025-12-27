@@ -4,7 +4,7 @@ import nodeIcon from "../../assets/images/node.svg";
 import { motion } from "framer-motion";
 const experiences = [
   {
-    title: "Full Stack Developer",
+    title: "Node.js Developer",
     company: "IqSetters LLP",
     location: "Noida, India",
     description:
