@@ -73,18 +73,18 @@ export default function Description(props) {
         <p className={styles.description}>{description}</p>
       )}
       <div className={styles.links}>
-        {code && 
-        <a
-          className={`${styles.button} ${styles.anchor}`}
-          style={{ "--color": `rgb(${color})` }}
-          href={code}
-          target="_blank"
-          rel="noreferrer"
-        >
-          <SvgCode className={styles["anchor_icon"]} />
-          <span>Code</span>
-        </a>
-          }
+        {code && (
+          <a
+            className={`${styles.button} ${styles.anchor}`}
+            style={{ "--color": `rgb(${color})` }}
+            href={code}
+            target="_blank"
+            rel="noreferrer"
+          >
+            <SvgCode className={styles["anchor_icon"]} />
+            <span>Code</span>
+          </a>
+        )}
         <a
           className={`${styles.button} ${styles.anchor}`}
           style={{ "--color": `rgb(${color})` }}
