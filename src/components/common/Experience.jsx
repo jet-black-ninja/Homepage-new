@@ -22,7 +22,7 @@ const experiences = [
       "AWS",
       "GitHub Actions",
     ],
-    duration: "Oct 2024 – Sept 2025",
+    duration: "Jan 2025 – Sept 2025",
   },
   {
     title: "Backend Developer",
@@ -39,7 +39,7 @@ const experiences = [
       "Redis",
       "MySQL",
     ],
-    duration: "May 2023 – Jul 2024",
+    duration: "Oct 2023 – Nov 2024",
   },
   {
     title: "Front End Developer, Intern",
